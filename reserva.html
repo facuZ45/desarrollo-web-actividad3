@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservar — Evolución Espresso</title>
+  <meta name="description" content="Reservá tu lugar en el recorrido Evolución Espresso por el Microcentro porteño.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:          '#F4EDE2',
+            'cream-deep':   '#E9DCC9',
+            parchment:      '#F3E7D6',
+            espresso:       '#2A1D16',
+            'espresso-soft':'#4A3428',
+            ink:            '#14100D',
+            crowshead:      '#241009',
+            copper:         '#B06B34',
+            'copper-deep':  '#8A4F22',
+            steel:          '#3E4B52',
+            'steel-light':  '#6B7C85',
+          },
+          fontFamily: {
+            fraunces: ['Fraunces', 'serif'],
+            inter:    ['Inter', 'sans-serif'],
+            mono:     ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-cream text-espresso font-inter antialiased min-h-screen flex flex-col items-center justify-center">
+  <!-- Página placeholder — a cargo de tu compañero -->
+  <main class="text-center px-5 py-20">
+    <span class="font-mono text-[10.9px] uppercase tracking-[0.28em] text-copper leading-4">Evolución Espresso</span>
+    <h1 class="font-fraunces text-5xl md:text-7xl text-espresso mt-4">Reservar</h1>
+    <p class="text-espresso-soft text-lg mt-4 max-w-md mx-auto">El formulario de reservas está en construcción.</p>
+    <a href="index.html" class="inline-flex items-center justify-center mt-8 px-7 py-3 border border-espresso/25 text-espresso font-semibold text-sm rounded-full hover:bg-espresso/5 transition-colors focus:outline-none focus:ring-2 focus:ring-copper">
+      ← Volver al inicio
+    </a>
+  </main>
+</body>
+</html>
+

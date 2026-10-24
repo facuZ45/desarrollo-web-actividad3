@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Tortoni — Evolución Espresso</title>
+  <meta name="description" content="Inaugurado en 1858, el Café Tortoni es el paradigma del café porteño tradicional. Roble, mármol y vitrales de estilo francés.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:          '#F4EDE2',
+            'cream-deep':   '#E9DCC9',
+            parchment:      '#F3E7D6',
+            espresso:       '#2A1D16',
+            'espresso-soft':'#4A3428',
+            ink:            '#14100D',
+            crowshead:      '#241009',
+            copper:         '#B06B34',
+            'copper-deep':  '#8A4F22',
+            steel:          '#3E4B52',
+            'steel-light':  '#6B7C85',
+          },
+          fontFamily: {
+            fraunces: ['Fraunces', 'serif'],
+            inter:    ['Inter', 'sans-serif'],
+            mono:     ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-parchment text-espresso font-inter antialiased">
+
+  <!-- ═══ SKIP TO CONTENT (Accesible sin warnings de linter) ═══ -->
+  <a href="#contenido-principal" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-4 focus:z-[100] focus:bg-copper focus:text-cream focus:px-4 focus:py-2 focus:rounded-lg focus:font-inter focus:text-sm focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-cream">Ir al contenido principal</a>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="bg-crowshead sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 md:px-[59px]">
+      <div class="flex items-center justify-between py-4">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-copper focus:ring-offset-2 focus:ring-offset-crowshead rounded-lg" aria-label="Evolución Espresso — Inicio">
+          <img src="./img/logo.png" alt="Evolución Espresso" class="w-12 h-12 md:w-[52px] md:h-[52px] rounded-full" width="48" height="48">
+          <span class="font-fraunces text-xl tracking-tight leading-5">
+            <span class="text-cream">Evolución</span><span class="text-copper"> Espresso</span>
+          </span>
+        </a>
+
+        <!-- Nav Desktop -->
+        <nav class="hidden md:flex items-center gap-1" aria-label="Navegación principal">
+          <a href="index.html" class="px-4 py-3 text-cream/80 font-medium text-sm hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded-lg">Inicio</a>
+
+          <!-- Dropdown Puntos de interés -->
+          <div class="relative" id="dropdown-desktop">
+            <button type="button" class="flex items-center gap-1.5 px-4 py-3 text-cream/80 font-medium text-sm hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded-lg" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-menu-desktop" id="dropdown-btn-desktop">
+              Puntos de interés
+              <img src="./img/chevron-down.svg" alt="" class="w-2.5 h-1.5 invert opacity-80 transition-transform" aria-hidden="true">
+            </button>
+            <div id="dropdown-menu-desktop" class="absolute top-full right-0 mt-2 w-56 bg-crowshead border border-cream/20 rounded-xl shadow-xl opacity-0 invisible transition-all duration-200 origin-top-right" role="menu">
+              <a href="tortoni.html" role="menuitem" class="block px-4 py-3 text-sm text-cream hover:bg-cream/10 rounded-t-xl transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-copper font-medium">Café Tortoni · 1858</a>
+              <a href="allsaints.html" role="menuitem" class="block px-4 py-3 text-sm text-cream/80 hover:text-cream hover:bg-cream/10 rounded-b-xl transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-copper">All Saints · s. XXI</a>
+            </div>
+          </div>
+
+          <a href="reserva.html" class="px-4 py-3 text-cream/80 font-medium text-sm hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded-lg">Reservar</a>
+        </nav>
+
+        <!-- Hamburger Mobile -->
+        <button type="button" class="md:hidden flex flex-col items-center justify-center w-11 h-11 border border-cream/20 rounded-lg gap-1.5 p-3 focus:outline-none focus:ring-2 focus:ring-copper" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú de navegación" id="hamburger-btn">
+          <span class="block w-5 h-0.5 bg-cream transition-all duration-300" id="hamburger-line-1"></span>
+          <span class="block w-5 h-0.5 bg-cream transition-all duration-300" id="hamburger-line-2"></span>
+          <span class="block w-5 h-0.5 bg-cream transition-all duration-300" id="hamburger-line-3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-300 ease-in-out border-t border-cream/10" aria-label="Navegación móvil" role="navigation">
+      <div class="px-5 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-3 text-cream/80 font-medium text-sm rounded-lg hover:bg-cream/10 transition-colors focus:outline-none focus:ring-2 focus:ring-copper">Inicio</a>
+
+        <div>
+          <button type="button" class="w-full flex items-center justify-between px-4 py-3 text-cream font-medium text-sm rounded-lg bg-cream/10 focus:outline-none focus:ring-2 focus:ring-copper" aria-expanded="false" id="mobile-poi-btn">
+            Puntos de interés
+            <img src="./img/chevron-down.svg" alt="" class="w-2.5 h-1.5 invert opacity-80 transition-transform" aria-hidden="true" id="mobile-poi-chevron">
+          </button>
+          <div id="mobile-poi-submenu" class="overflow-hidden max-h-0 transition-all duration-200 pl-4">
+            <a href="tortoni.html" class="block px-4 py-2.5 text-cream text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded-lg">Café Tortoni · 1858</a>
+            <a href="allsaints.html" class="block px-4 py-2.5 text-cream/70 text-sm hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded-lg">All Saints · s. XXI</a>
+          </div>
+        </div>
+
+        <a href="reserva.html" class="block px-4 py-3 text-cream/80 font-medium text-sm rounded-lg hover:bg-cream/10 transition-colors focus:outline-none focus:ring-2 focus:ring-copper">Reservar</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══ CONTENIDO PRINCIPAL ═══ -->
+  <main id="contenido-principal">
+
+    <!-- ═══ HERO TORTONI ═══ -->
+    <section class="relative overflow-hidden" aria-labelledby="tortoni-heading">
+      <!-- Imagen de fondo oficial del Figma -->
+      <img src="./img/tortoni-hero.png" alt="" class="absolute inset-0 w-full h-full object-cover" aria-hidden="true" loading="eager">
+      <!-- Gradient overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-crowshead via-crowshead/40 to-crowshead/20" aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-5 md:px-[59px]">
+        <div class="flex flex-col justify-end pt-[223px] md:pt-[250px] pb-12">
+          <!-- Kicker -->
+          <span class="font-mono text-[10.9px] uppercase tracking-[0.28em] text-copper leading-4">Punto 01 · El pasado</span>
+
+          <!-- Heading -->
+          <div class="mt-3">
+            <h1 id="tortoni-heading" class="font-fraunces text-[60px] md:text-[96px] leading-[54px] md:leading-[86.4px] tracking-tight text-cream">
+              Café Tortoni
+            </h1>
+          </div>
+
+          <!-- Descripción -->
+          <div class="mt-5 md:max-w-[672px]">
+            <p class="text-cream/85 text-lg leading-[29.25px]">
+              Inaugurado en 1858, es el paradigma del café porteño tradicional. Un espacio donde el tiempo se detiene entre mesas de roble, mármol y vitrales de estilo francés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTENIDO DETALLE ═══ -->
+    <section class="bg-parchment" aria-labelledby="descubrir-heading">
+      <div class="max-w-7xl mx-auto px-5 md:px-[59px] py-14">
+        <div class="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-12">
+
+          <!-- ─── Columna izquierda: Contenido ─── -->
+          <div class="flex flex-col gap-12">
+
+            <!-- Bloque: Lo que vas a descubrir -->
+            <div class="flex flex-col gap-3.5">
+              <span class="font-mono text-[10.9px] uppercase tracking-[0.28em] text-copper leading-4">Lo que vas a descubrir</span>
+              <h2 id="descubrir-heading" class="font-fraunces text-[30px] md:text-4xl leading-[41.25px] md:leading-[49.5px]">
+                Tertulias, mármol y mozos de oficio.
+              </h2>
+              <div class="flex flex-col gap-4 mt-1">
+                <p class="text-espresso-soft text-base leading-[26px]">
+                  Aquí se respira la historia de las tertulias literarias, con figuras como <strong class="text-espresso font-bold">Borges y Cortázar</strong> entre sus mesas. El inmenso valor de su arquitectura conservada convive con la mística de la atención brindada por los históricos mozos de oficio.
+                </p>
+                <p class="text-espresso-soft text-base leading-[26px]">
+                  Cada rincón —del cielorraso vitraleado a la loza clásica— es un pedazo de patrimonio porteño que se sigue habitando a diario.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bloque: Experiencias -->
+            <div class="flex flex-col gap-4">
+              <span class="font-mono text-[10.9px] uppercase tracking-[0.28em] text-copper leading-4">Experiencias</span>
+
+              <!-- Cards de experiencias -->
+              <div class="flex flex-col md:flex-row gap-px bg-espresso/12 border border-espresso/12 rounded-2xl overflow-hidden">
+                <div class="bg-parchment p-5 flex flex-col gap-2 flex-1">
+                  <h3 class="font-fraunces text-xl leading-[25px]">Cortado en jarrito</h3>
+                  <p class="text-espresso-soft text-sm leading-[19.25px]">El clásico porteño servido en loza sobre mármol.</p>
+                </div>
+                <div class="bg-parchment p-5 flex flex-col gap-2 flex-1">
+                  <h3 class="font-fraunces text-xl leading-[25px]">Churros con chocolate</h3>
+                  <p class="text-espresso-soft text-sm leading-[19.25px]">La tradicional porción caliente, imperdible.</p>
+                </div>
+                <div class="bg-parchment p-5 flex flex-col gap-2 flex-1">
+                  <h3 class="font-fraunces text-xl leading-[25px]">Tango en La Bodega</h3>
+                  <p class="text-espresso-soft text-sm leading-[19.25px]">Espectáculo tradicional en el subsuelo histórico.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bloque: Recomendación -->
+            <aside class="bg-copper/[0.08] border-l-4 border-copper rounded-2xl p-5 flex flex-col gap-2" aria-label="Recomendación">
+              <span class="font-mono text-[10.9px] uppercase tracking-[0.2em] text-copper-deep leading-4">Recomendación</span>
+              <p class="text-espresso text-base leading-[26px]">
+                Visitá a primera hora de la mañana para evitar las largas filas de turistas en la vereda y apreciar la magnitud del salón despejado.
+              </p>
+            </aside>
+          </div>
+
+          <!-- ─── Columna derecha: Aside (Datos + Galería) ─── -->
+          <aside class="flex flex-col gap-6">
+
+            <!-- Datos útiles -->
+            <div class="bg-cream border border-espresso/12 rounded-2xl p-6 flex flex-col gap-4">
+              <span class="font-mono text-[10.9px] uppercase tracking-[0.28em] text-copper leading-4">Datos útiles</span>
+
+              <dl>
+                <div class="flex justify-between items-start py-2.5 border-b border-espresso/10">
+                  <dt class="font-mono text-xs uppercase tracking-[0.025em] text-espresso/55 leading-4">Nombre</dt>
+                  <dd class="text-sm font-medium text-right leading-5">Café Tortoni</dd>
+                </div>
+                <div class="flex justify-between items-start py-2.5 border-b border-espresso/10">
+                  <dt class="font-mono text-xs uppercase tracking-[0.025em] text-espresso/55 leading-4">Dirección</dt>
+                  <dd class="text-sm font-medium text-right leading-5">Av. de Mayo 825, CABA</dd>
+                </div>
+                <div class="flex justify-between items-start py-2.5 border-b border-espresso/10">
+                  <dt class="font-mono text-xs uppercase tracking-[0.025em] text-espresso/55 leading-4">Horario</dt>
+                  <dd class="text-sm font-medium text-right leading-5">Todos los días · 8:00 – 21:00 hs</dd>
+                </div>
+                <div class="flex justify-between items-start py-2.5 border-b border-espresso/10">
+                  <dt class="font-mono text-xs uppercase tracking-[0.025em] text-espresso/55 leading-4">Reservas</dt>
+                  <dd class="text-sm font-medium text-right leading-5">Espectáculos nocturnos<br>con anticipación</dd>
+                </div>
+                <div class="flex justify-between items-start py-2.5 border-b border-espresso/10">
+                  <dt class="font-mono text-xs uppercase tracking-[0.025em] text-espresso/55 leading-4">Accesibilidad</dt>
+                  <dd class="text-sm font-medium text-right leading-5">Apto para sillas de ruedas</dd>
+                </div>
+                <div class="flex justify-between items-start py-2.5">
+                  <dt class="font-mono text-xs uppercase tracking-[0.025em] text-espresso/55 leading-4">Inaugurado</dt>
+                  <dd class="text-sm font-medium text-right leading-5">1858</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Galería de imágenes interactivas (Click para ampliar en modal / lightbox) -->
+            <div class="grid grid-cols-2 gap-3" aria-label="Galería fotográfica de Café Tortoni">
+              <!-- Foto 1: Fachada histórica (span 2) -->
+              <button type="button" class="zoomable-btn col-span-2 relative group overflow-hidden rounded-2xl border border-espresso/10 focus:outline-none focus:ring-2 focus:ring-copper cursor-zoom-in text-left" data-full-src="./img/tortoni-fachada-tango.png" data-caption="Fachada histórica del Café Tortoni y Academia Nacional del Tango sobre Avenida de Mayo 825" aria-label="Ampliar imagen: Fachada del Café Tortoni y Academia Nacional del Tango">
+                <img src="./img/tortoni-fachada-tango.png" alt="Fachada histórica del Café Tortoni y Academia Nacional del Tango sobre Avenida de Mayo" class="w-full h-56 object-cover rounded-2xl group-hover:scale-[1.03] transition-transform duration-300" loading="lazy">
+                <span class="absolute bottom-2.5 right-2.5 bg-espresso/80 text-cream text-xs px-2.5 py-1 rounded-lg backdrop-blur-sm opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-1.5 shadow">
+                  <svg class="w-3.5 h-3.5 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
+                  <span>Ampliar</span>
+                </span>
+              </button>
+
+              <!-- Foto 2: Café con churros (abajo izq) -->
+              <button type="button" class="zoomable-btn relative group overflow-hidden rounded-2xl border border-espresso/10 focus:outline-none focus:ring-2 focus:ring-copper cursor-zoom-in text-left" data-full-src="./img/tortoni-churros-cafe.png" data-caption="Café cortado servido en loza tradicional sobre mesa de mármol con churros calientes y jarrito de cobre" aria-label="Ampliar imagen: Café cortado con churros y jarrito">
+                <img src="./img/tortoni-churros-cafe.png" alt="Café cortado servido en loza tradicional sobre mesa de mármol con churros y jarrito de cobre" class="w-full h-40 object-cover rounded-2xl group-hover:scale-[1.03] transition-transform duration-300" loading="lazy">
+                <span class="absolute bottom-2 right-2 bg-espresso/80 text-cream text-[11px] px-2 py-0.5 rounded-md backdrop-blur-sm opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-1 shadow">
+                  <svg class="w-3 h-3 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
+                  <span>Zoom</span>
+                </span>
+              </button>
+
+              <!-- Foto 3: Salón interior con clientes (abajo der) -->
+              <button type="button" class="zoomable-btn relative group overflow-hidden rounded-2xl border border-espresso/10 focus:outline-none focus:ring-2 focus:ring-copper cursor-zoom-in text-left" data-full-src="./img/tortoni-salon-mesas.png" data-caption="Salón principal del Café Tortoni con sus mesas de roble, columnas clásicas y mozos de oficio" aria-label="Ampliar imagen: Salón con mesas y mozos de oficio">
+                <img src="./img/tortoni-salon-mesas.png" alt="Salón clásico del Café Tortoni con mesas de roble, clientes y mozos de oficio" class="w-full h-40 object-cover rounded-2xl group-hover:scale-[1.03] transition-transform duration-300" loading="lazy">
+                <span class="absolute bottom-2 right-2 bg-espresso/80 text-cream text-[11px] px-2 py-0.5 rounded-md backdrop-blur-sm opacity-90 group-hover:opacity-100 transition-opacity flex items-center gap-1 shadow">
+                  <svg class="w-3 h-3 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path></svg>
+                  <span>Zoom</span>
+                </span>
+              </button>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- ═══ NAVEGACIÓN ENTRE PARADAS ═══ -->
+        <div class="flex flex-wrap gap-3 pt-8 mt-12 border-t border-espresso/12">
+          <a href="index.html" class="inline-flex items-center justify-center px-7 py-3 border border-espresso/25 text-espresso font-semibold text-sm tracking-wide rounded-full hover:bg-espresso/5 transition-colors focus:outline-none focus:ring-2 focus:ring-copper focus:ring-offset-2 focus:ring-offset-parchment">
+            ← Volver al inicio
+          </a>
+          <a href="allsaints.html" class="inline-flex items-center justify-center px-7 py-3.5 bg-copper text-cream font-semibold text-sm tracking-wide rounded-full shadow-[0_10px_30px_-12px_rgba(138,79,34,0.9)] hover:bg-copper-deep transition-colors focus:outline-none focus:ring-2 focus:ring-copper focus:ring-offset-2 focus:ring-offset-parchment">
+            Siguiente parada →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="bg-ink" role="contentinfo">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Contenido del footer -->
+      <div class="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-10 px-5 md:px-[59px] py-14">
+
+        <!-- Columna 1 -->
+        <div class="flex flex-col gap-3">
+          <span class="font-fraunces text-2xl leading-8">
+            <span class="text-cream">Evolución</span><span class="text-copper"> Espresso</span>
+          </span>
+          <p class="text-cream/60 text-sm leading-[22.75px]">
+            Un recorrido peatonal que contrasta el Café Notable del siglo XIX con el Laboratorio de Especialidad del siglo XXI. Del mármol al método.
+          </p>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="flex flex-col gap-4">
+          <span class="font-mono text-[10.9px] uppercase tracking-[0.25em] text-copper leading-4">El recorrido</span>
+          <ul class="flex flex-col gap-2" aria-label="Información del recorrido">
+            <li class="text-cream/70 text-sm leading-5">Recorridos temáticos</li>
+            <li class="text-cream/70 text-sm leading-5">Gastronomía · Historia · Arquitectura</li>
+            <li class="text-cream/70 text-sm leading-5">Microcentro Porteño, CABA</li>
+          </ul>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="flex flex-col gap-4">
+          <span class="font-mono text-[10.9px] uppercase tracking-[0.25em] text-copper leading-4">Paradas</span>
+          <ul class="flex flex-col gap-2" aria-label="Paradas del recorrido">
+            <li><a href="tortoni.html" class="text-cream/70 text-sm leading-5 hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded">Café Tortoni · 1858</a></li>
+            <li><a href="allsaints.html" class="text-cream/70 text-sm leading-5 hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded">All Saints Cafe · s. XXI</a></li>
+            <li><a href="index.html" class="text-cream/70 text-sm leading-5 hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded">Inicio</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Barra inferior -->
+      <div class="border-t border-cream/10">
+        <div class="flex flex-col md:flex-row md:justify-between gap-1 px-5 md:px-[59px] py-5">
+          <span class="font-mono text-xs text-cream/40 leading-4">Av. de Mayo 825 → Cdad. de la Paz 2300 · Buenos Aires</span>
+          <span class="font-mono text-xs text-cream/40 leading-4">Prototipo · Diseño y Desarrollo Web</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ MODAL / LIGHTBOX PARA VISUALIZACIÓN DE IMÁGENES ═══ -->
+  <div id="image-modal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 md:p-8 transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true" aria-label="Visualizador de imagen en tamaño completo">
+    <!-- Botón de cerrar -->
+    <button type="button" id="modal-close-btn" class="absolute top-4 right-4 md:top-6 md:right-6 text-cream/90 hover:text-cream bg-espresso/80 hover:bg-espresso p-3 rounded-full border border-cream/20 transition-all focus:outline-none focus:ring-2 focus:ring-copper z-10 shadow-lg cursor-pointer" aria-label="Cerrar vista ampliada">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    
+    <!-- Contenedor de la imagen y epígrafe -->
+    <figure class="relative max-w-5xl max-h-[92vh] flex flex-col items-center justify-center p-2" id="modal-figure">
+      <img id="modal-img" src="" alt="" class="max-h-[78vh] md:max-h-[82vh] max-w-full w-auto object-contain rounded-2xl shadow-2xl transition-transform duration-300 scale-95 border border-cream/15">
+      <figcaption id="modal-caption" class="mt-3 text-cream/90 text-sm md:text-base font-inter text-center max-w-2xl px-4 py-2 bg-espresso/85 backdrop-blur-sm rounded-xl border border-cream/10 shadow-md"></figcaption>
+    </figure>
+  </div>
+
+  <!-- ═══ JAVASCRIPT ═══ -->
+  <script>
+    // --- Lightbox / Modal de Imágenes ---
+    const imageModal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalCaption = document.getElementById('modal-caption');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const modalFigure = document.getElementById('modal-figure');
+    let lastActiveTrigger = null;
+
+    function openModal(src, caption, triggerEl) {
+      lastActiveTrigger = triggerEl;
+      modalImg.src = src;
+      modalImg.alt = caption;
+      modalCaption.textContent = caption;
+
+      imageModal.classList.remove('hidden');
+      imageModal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+
+      // Animación suave de apertura
+      requestAnimationFrame(() => {
+        imageModal.classList.remove('opacity-0');
+        imageModal.classList.add('opacity-100');
+        modalImg.classList.remove('scale-95');
+        modalImg.classList.add('scale-100');
+      });
+
+      modalCloseBtn.focus();
+    }
+
+    function closeModal() {
+      if (imageModal.classList.contains('hidden')) return;
+
+      imageModal.classList.remove('opacity-100');
+      imageModal.classList.add('opacity-0');
+      modalImg.classList.remove('scale-100');
+      modalImg.classList.add('scale-95');
+
+      setTimeout(() => {
+        imageModal.classList.remove('flex');
+        imageModal.classList.add('hidden');
+        modalImg.src = '';
+        document.body.classList.remove('overflow-hidden');
+        if (lastActiveTrigger) {
+          lastActiveTrigger.focus();
+        }
+      }, 250);
+    }
+
+    document.querySelectorAll('.zoomable-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.getAttribute('data-full-src');
+        const caption = btn.getAttribute('data-caption');
+        openModal(src, caption, btn);
+      });
+    });
+
+    modalCloseBtn.addEventListener('click', closeModal);
+
+    // Cerrar al hacer clic en el backdrop (fuera de la figura de la imagen)
+    imageModal.addEventListener('click', (e) => {
+      if (e.target === imageModal || e.target === modalFigure) {
+        closeModal();
+      }
+    });
+
+    // --- Menú Hamburguesa Mobile ---
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const line1 = document.getElementById('hamburger-line-1');
+    const line2 = document.getElementById('hamburger-line-2');
+    const line3 = document.getElementById('hamburger-line-3');
+    let menuOpen = false;
+
+    hamburgerBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      hamburgerBtn.setAttribute('aria-expanded', menuOpen);
+      hamburgerBtn.setAttribute('aria-label', menuOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+
+      if (menuOpen) {
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        line1.classList.add('translate-y-2', 'rotate-45');
+        line2.classList.add('opacity-0');
+        line3.classList.add('-translate-y-2', '-rotate-45');
+      } else {
+        mobileMenu.style.maxHeight = '0';
+        line1.classList.remove('translate-y-2', 'rotate-45');
+        line2.classList.remove('opacity-0');
+        line3.classList.remove('-translate-y-2', '-rotate-45');
+      }
+    });
+
+    // --- Sub-menú Puntos de Interés (Mobile) ---
+    const mobilePoiBtn = document.getElementById('mobile-poi-btn');
+    const mobilePoiSubmenu = document.getElementById('mobile-poi-submenu');
+    const mobilePoiChevron = document.getElementById('mobile-poi-chevron');
+    let poiOpen = false;
+
+    mobilePoiBtn.addEventListener('click', () => {
+      poiOpen = !poiOpen;
+      mobilePoiBtn.setAttribute('aria-expanded', poiOpen);
+
+      if (poiOpen) {
+        mobilePoiSubmenu.style.maxHeight = mobilePoiSubmenu.scrollHeight + 'px';
+        mobilePoiChevron.classList.add('rotate-180');
+      } else {
+        mobilePoiSubmenu.style.maxHeight = '0';
+        mobilePoiChevron.classList.remove('rotate-180');
+      }
+
+      if (menuOpen) {
+        setTimeout(() => {
+          mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        }, 210);
+      }
+    });
+
+    // --- Dropdown Desktop ---
+    const dropdownDesktop = document.getElementById('dropdown-desktop');
+    const dropdownBtnDesktop = document.getElementById('dropdown-btn-desktop');
+    const dropdownMenuDesktop = document.getElementById('dropdown-menu-desktop');
+
+    dropdownBtnDesktop.addEventListener('click', () => {
+      const isExpanded = dropdownBtnDesktop.getAttribute('aria-expanded') === 'true';
+      dropdownBtnDesktop.setAttribute('aria-expanded', !isExpanded);
+
+      if (!isExpanded) {
+        dropdownMenuDesktop.classList.remove('opacity-0', 'invisible');
+        dropdownMenuDesktop.classList.add('opacity-100', 'visible');
+      } else {
+        dropdownMenuDesktop.classList.add('opacity-0', 'invisible');
+        dropdownMenuDesktop.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdownDesktop.contains(e.target)) {
+        dropdownBtnDesktop.setAttribute('aria-expanded', 'false');
+        dropdownMenuDesktop.classList.add('opacity-0', 'invisible');
+        dropdownMenuDesktop.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+        dropdownBtnDesktop.setAttribute('aria-expanded', 'false');
+        dropdownMenuDesktop.classList.add('opacity-0', 'invisible');
+        dropdownMenuDesktop.classList.remove('opacity-100', 'visible');
+
+        if (menuOpen) {
+          menuOpen = false;
+          hamburgerBtn.setAttribute('aria-expanded', 'false');
+          mobileMenu.style.maxHeight = '0';
+          line1.classList.remove('translate-y-2', 'rotate-45');
+          line2.classList.remove('opacity-0');
+          line3.classList.remove('-translate-y-2', '-rotate-45');
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
