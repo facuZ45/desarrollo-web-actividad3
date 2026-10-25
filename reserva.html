@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reservar — Evolución Espresso</title>
-  <meta name="description" content="Reservá tu lugar en el recorrido Evolución Espresso por el Microcentro porteño.">
+  <title>Reservas & Experiencias — Evolución Espresso</title>
+  <meta name="description" content="Reservá tu lugar en el recorrido sensorial Evolución Espresso. Elegí tu paquete, calculá tarifas en pesos o dólares y asegurá tu visita guiada.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,16 +40,1165 @@
     }
   </script>
 </head>
-<body class="bg-cream text-espresso font-inter antialiased min-h-screen flex flex-col items-center justify-center">
-  <!-- Página placeholder — a cargo de tu compañero -->
-  <main class="text-center px-5 py-20">
-    <span class="font-mono text-[10.9px] uppercase tracking-[0.28em] text-copper leading-4">Evolución Espresso</span>
-    <h1 class="font-fraunces text-5xl md:text-7xl text-espresso mt-4">Reservar</h1>
-    <p class="text-espresso-soft text-lg mt-4 max-w-md mx-auto">El formulario de reservas está en construcción.</p>
-    <a href="index.html" class="inline-flex items-center justify-center mt-8 px-7 py-3 border border-espresso/25 text-espresso font-semibold text-sm rounded-full hover:bg-espresso/5 transition-colors focus:outline-none focus:ring-2 focus:ring-copper">
-      ← Volver al inicio
-    </a>
+
+<body class="bg-cream text-espresso font-inter antialiased min-h-screen flex flex-col">
+
+  <!-- ═══ SKIP TO CONTENT ═══ -->
+  <a href="#contenido-principal" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-4 focus:z-[100] focus:bg-copper focus:text-cream focus:px-4 focus:py-2 focus:rounded-lg focus:font-inter focus:text-sm focus:font-semibold focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-cream">Ir al contenido principal</a>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="bg-espresso sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 md:px-[59px]">
+      <div class="flex items-center justify-between py-4">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-copper focus:ring-offset-2 focus:ring-offset-espresso rounded-lg" aria-label="Evolución Espresso — Inicio">
+          <img src="./img/logo.png" alt="Evolución Espresso" class="w-12 h-12 rounded-full" width="48" height="48">
+          <span class="font-fraunces text-xl tracking-tight leading-5">
+            <span class="text-cream">Evolución</span><span class="text-copper"> Espresso</span>
+          </span>
+        </a>
+
+        <!-- Nav Desktop -->
+        <nav class="hidden md:flex items-center gap-1" aria-label="Navegación principal">
+          <a href="index.html" class="px-4 py-3 text-cream/80 font-medium text-sm hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded-lg">Inicio</a>
+
+          <!-- Dropdown Puntos de interés -->
+          <div class="relative" id="dropdown-desktop">
+            <button type="button" class="flex items-center gap-1.5 px-4 py-3 text-cream/80 font-medium text-sm hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded-lg" aria-expanded="false" aria-haspopup="true" aria-controls="dropdown-menu-desktop" id="dropdown-btn-desktop">
+              Puntos de interés
+              <img src="./img/chevron-down.svg" alt="" class="w-2.5 h-1.5 invert opacity-80 transition-transform" aria-hidden="true">
+            </button>
+            <div id="dropdown-menu-desktop" class="absolute top-full right-0 mt-2 w-56 bg-espresso border border-cream/20 rounded-xl shadow-xl opacity-0 invisible transition-all duration-200 origin-top-right" role="menu">
+              <a href="tortoni.html" role="menuitem" class="block px-4 py-3 text-sm text-cream/80 hover:text-cream hover:bg-cream/10 rounded-t-xl transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-copper">Café Tortoni · 1858</a>
+              <a href="allsaints.html" role="menuitem" class="block px-4 py-3 text-sm text-cream/80 hover:text-cream hover:bg-cream/10 rounded-b-xl transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-copper">All Saints · s. XXI</a>
+            </div>
+          </div>
+
+          <a href="reserva.html" class="px-4 py-3 text-cream font-medium text-sm bg-cream/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-copper" aria-current="page">Reservar</a>
+        </nav>
+
+        <!-- Hamburger Mobile -->
+        <button type="button" class="md:hidden flex flex-col items-center justify-center w-11 h-11 border border-cream/20 rounded-lg gap-1.5 p-3 focus:outline-none focus:ring-2 focus:ring-copper" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú de navegación" id="hamburger-btn">
+          <span class="block w-5 h-0.5 bg-cream transition-all duration-300" id="hamburger-line-1"></span>
+          <span class="block w-5 h-0.5 bg-cream transition-all duration-300" id="hamburger-line-2"></span>
+          <span class="block w-5 h-0.5 bg-cream transition-all duration-300" id="hamburger-line-3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-300 ease-in-out border-t border-cream/10" aria-label="Navegación móvil" role="navigation">
+      <div class="px-5 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-3 text-cream/80 font-medium text-sm rounded-lg hover:bg-cream/10 transition-colors focus:outline-none focus:ring-2 focus:ring-copper">Inicio</a>
+
+        <div>
+          <button type="button" class="w-full flex items-center justify-between px-4 py-3 text-cream/80 font-medium text-sm rounded-lg hover:bg-cream/10 transition-colors focus:outline-none focus:ring-2 focus:ring-copper" aria-expanded="false" id="mobile-poi-btn">
+            Puntos de interés
+            <img src="./img/chevron-down.svg" alt="" class="w-2.5 h-1.5 invert opacity-80 transition-transform" aria-hidden="true" id="mobile-poi-chevron">
+          </button>
+          <div id="mobile-poi-submenu" class="overflow-hidden max-h-0 transition-all duration-200 pl-4">
+            <a href="tortoni.html" class="block px-4 py-2.5 text-cream/70 text-sm hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded-lg">Café Tortoni · 1858</a>
+            <a href="allsaints.html" class="block px-4 py-2.5 text-cream/70 text-sm hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded-lg">All Saints · s. XXI</a>
+          </div>
+        </div>
+
+        <a href="reserva.html" class="block px-4 py-3 text-cream font-medium text-sm rounded-lg bg-cream/10 focus:outline-none focus:ring-2 focus:ring-copper">Reservar</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══ CONTENIDO PRINCIPAL ═══ -->
+  <main id="contenido-principal" class="flex-grow">
+
+    <!-- ═══ HERO BANNER ═══ -->
+    <section class="bg-espresso text-cream py-14 md:py-20 border-b border-copper/30 relative overflow-hidden" aria-labelledby="booking-heading">
+      <div class="max-w-7xl mx-auto px-5 md:px-[59px] relative z-10">
+        <div class="max-w-3xl">
+          <span class="font-mono text-xs uppercase tracking-[0.28em] text-copper block mb-3">Planificá tu recorrido sensorial</span>
+          <h1 id="booking-heading" class="font-fraunces text-4xl sm:text-5xl md:text-6xl text-cream tracking-tight leading-tight">
+            Reservá tu experiencia <span class="text-copper">cafetera</span>
+          </h1>
+          <p class="text-cream/80 text-base md:text-lg mt-4 leading-relaxed">
+            Elegí tu paquete temático, calculá la cotización en vivo en pesos o dólares y asegurá tu plaza guiada desde la liturgia del siglo XIX en Monserrat hasta el laboratorio de especialidad en Belgrano.
+          </p>
+        </div>
+      </div>
+      <!-- Textura sutil decorativa de fondo -->
+      <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-copper/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+    </section>
+
+    <!-- ═══ SECCIÓN PRINCIPAL DE RESERVAS ═══ -->
+    <section class="max-w-7xl mx-auto px-5 md:px-[59px] py-12 md:py-16">
+      
+      <!-- Barra Superior: Selector de Moneda y Tipo de Cambio -->
+      <div class="bg-parchment/60 border border-espresso/15 rounded-2xl p-4 sm:p-5 mb-10 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs">
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full bg-copper/20 text-copper flex items-center justify-center font-bold text-sm">💱</span>
+          <div>
+            <span class="text-xs font-mono uppercase tracking-wider text-espresso-soft block">Moneda de Visualización</span>
+            <span class="text-sm font-semibold text-espresso">Seleccioná tu divisa de pago</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="inline-flex bg-white p-1 rounded-xl border border-espresso/20 shadow-xs" role="radiogroup" aria-label="Seleccionar moneda">
+            <button type="button" id="currency-usd" class="px-4 py-2 text-xs md:text-sm font-semibold rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-copper bg-espresso text-cream shadow-xs" role="radio" aria-checked="true">
+              USD ($)
+            </button>
+            <button type="button" id="currency-ars" class="px-4 py-2 text-xs md:text-sm font-semibold rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-copper text-espresso hover:bg-cream" role="radio" aria-checked="false">
+              ARS ($)
+            </button>
+          </div>
+          <span class="text-[11px] md:text-xs font-mono text-espresso-soft bg-white/70 px-3 py-1.5 rounded-lg border border-espresso/10">
+            TC: 1 USD = $1.250 ARS (BNA)
+          </span>
+        </div>
+      </div>
+
+      <!-- Grid de Reserva: Formulario (Izq) + Resumen Fijo (Der) -->
+      <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-10 items-start">
+
+        <!-- ═══ FORMULARIO DE RESERVA ═══ -->
+        <form id="booking-form" novalidate class="space-y-10">
+
+          <!-- PASO 1: SELECCIÓN DE PAQUETE -->
+          <fieldset class="bg-white border border-espresso/15 rounded-2xl p-6 md:p-8 shadow-xs">
+            <legend class="font-fraunces text-2xl text-espresso flex items-center gap-3 px-2">
+              <span class="w-7 h-7 rounded-full bg-copper text-cream font-mono text-sm flex items-center justify-center font-bold">1</span>
+              Seleccioná tu Paquete
+            </legend>
+            <p class="text-sm text-espresso-soft mt-1 mb-6">Cada opción cuenta con cata guiada, material pedagógico e ingreso programado.</p>
+
+            <div class="grid grid-cols-1 gap-4" id="packages-container">
+              
+              <!-- Paquete 1: Completo -->
+              <label class="package-option relative border-2 border-copper bg-parchment/30 rounded-xl p-5 cursor-pointer transition-all hover:shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <input type="radio" name="package" value="completo" checked class="sr-only">
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-copper text-cream text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded font-bold">Recomendado</span>
+                    <span class="text-xs font-mono text-espresso-soft">~3.5 Horas · 2 Paradas</span>
+                  </div>
+                  <h3 class="font-fraunces text-xl text-espresso font-semibold">Recorrido Completo: Del Mármol al Método</h3>
+                  <p class="text-xs text-espresso-soft mt-1 leading-relaxed">
+                    Ambas cafeterías (Tortoni + All Saints). Incluye cata doble (espresso en vajilla de loza + filtrados V60/Aeropress), guía barista y traslado guiado en Subte D.
+                  </p>
+                </div>
+                <div class="text-right md:min-w-[120px]">
+                  <span class="text-xs font-mono text-espresso-soft block">Por persona</span>
+                  <span class="font-fraunces text-2xl font-bold text-copper package-price" data-usd="35" data-ars="43750">$35 USD</span>
+                </div>
+              </label>
+
+              <!-- Paquete 2: Café Tortoni -->
+              <label class="package-option relative border border-espresso/20 bg-white rounded-xl p-5 cursor-pointer transition-all hover:border-espresso/40 hover:shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <input type="radio" name="package" value="tortoni" class="sr-only">
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-espresso text-cream text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded font-bold">Patrimonio Histórico</span>
+                    <span class="text-xs font-mono text-espresso-soft">~1.5 Horas · 1 Parada</span>
+                  </div>
+                  <h3 class="font-fraunces text-xl text-espresso font-semibold">Liturgia Porteña: Café Tortoni (1858)</h3>
+                  <p class="text-xs text-espresso-soft mt-1 leading-relaxed">
+                    Visita al mítico café de Av. de Mayo. Mesa en salón de época, café espresso tradicional servido en vajilla de loza, churros artesanales y charla literaria.
+                  </p>
+                </div>
+                <div class="text-right md:min-w-[120px]">
+                  <span class="text-xs font-mono text-espresso-soft block">Por persona</span>
+                  <span class="font-fraunces text-2xl font-bold text-espresso package-price" data-usd="20" data-ars="25000">$20 USD</span>
+                </div>
+              </label>
+
+              <!-- Paquete 3: All Saints Cafe -->
+              <label class="package-option relative border border-espresso/20 bg-white rounded-xl p-5 cursor-pointer transition-all hover:border-espresso/40 hover:shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <input type="radio" name="package" value="allsaints" class="sr-only">
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-steel text-cream text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded font-bold">Laboratorio Specialty</span>
+                    <span class="text-xs font-mono text-espresso-soft">~1.5 Horas · 1 Parada</span>
+                  </div>
+                  <h3 class="font-fraunces text-xl text-espresso font-semibold">Tercera Ola: All Saints Cafe (s. XXI)</h3>
+                  <p class="text-xs text-espresso-soft mt-1 leading-relaxed">
+                    Experiencia técnica en Belgrano. Demostración en vivo en Brew Bar, cata sensorial de dos métodos de filtrado (V60 y Aeropress) y maridaje de autor.
+                  </p>
+                </div>
+                <div class="text-right md:min-w-[120px]">
+                  <span class="text-xs font-mono text-espresso-soft block">Por persona</span>
+                  <span class="font-fraunces text-2xl font-bold text-espresso package-price" data-usd="22" data-ars="27500">$22 USD</span>
+                </div>
+              </label>
+
+            </div>
+          </fieldset>
+
+          <!-- PASO 2: ASISTENTES, FECHA Y HORARIO -->
+          <fieldset class="bg-white border border-espresso/15 rounded-2xl p-6 md:p-8 shadow-xs">
+            <legend class="font-fraunces text-2xl text-espresso flex items-center gap-3 px-2">
+              <span class="w-7 h-7 rounded-full bg-copper text-cream font-mono text-sm flex items-center justify-center font-bold">2</span>
+              Participantes, Fecha & Turno
+            </legend>
+            <p class="text-sm text-espresso-soft mt-1 mb-6">Coordinamos grupos reducidos de hasta 12 personas para garantizar una cata personalizada.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <!-- Cantidad de Personas -->
+              <div>
+                <label for="participants-input" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-2">
+                  Cantidad de Visitantes
+                </label>
+                <div class="flex items-center gap-3">
+                  <button type="button" id="btn-decrease-pax" class="w-11 h-11 bg-parchment hover:bg-cream-deep border border-espresso/20 rounded-xl font-bold text-lg text-espresso flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-copper cursor-pointer" aria-label="Disminuir un participante">
+                    −
+                  </button>
+                  <input type="number" id="participants-input" name="participants" min="1" max="12" value="2" readonly class="w-16 h-11 text-center font-fraunces text-2xl font-bold bg-cream border border-espresso/20 rounded-xl text-espresso">
+                  <button type="button" id="btn-increase-pax" class="w-11 h-11 bg-parchment hover:bg-cream-deep border border-espresso/20 rounded-xl font-bold text-lg text-espresso flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-copper cursor-pointer" aria-label="Aumentar un participante">
+                    +
+                  </button>
+                </div>
+                <!-- Banner de descuento grupal -->
+                <div id="group-discount-badge" class="mt-2.5 hidden bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs px-3 py-1.5 rounded-lg items-center gap-2">
+                  <span>🎉</span>
+                  <span class="font-semibold">¡15% OFF aplicado por grupo (≥ 4 personas)!</span>
+                </div>
+              </div>
+
+              <!-- Selector de Fecha -->
+              <div>
+                <label for="booking-date" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-2">
+                  Fecha del Recorrido <span class="text-red-600">*</span>
+                </label>
+                <input type="date" id="booking-date" name="date" required class="w-full h-11 px-3.5 bg-cream border border-espresso/25 rounded-xl text-sm text-espresso focus:outline-none focus:ring-2 focus:ring-copper focus:border-copper">
+                <span id="date-error" class="text-xs text-red-600 mt-1 hidden block" role="alert">Por favor seleccioná una fecha válida a partir de hoy.</span>
+              </div>
+
+            </div>
+
+            <!-- Selector de Turno de Horario -->
+            <div class="mt-6">
+              <label class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-2">
+                Turno Horario <span class="text-red-600">*</span>
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="time-slots-container">
+                <label class="time-slot-label border-2 border-copper bg-parchment/40 rounded-xl p-3 text-center cursor-pointer hover:border-copper transition-all">
+                  <input type="radio" name="timeslot" value="10:00" checked class="sr-only">
+                  <span class="block font-mono text-sm font-bold text-espresso">10:00 hs</span>
+                  <span class="block text-[11px] text-espresso-soft">Turno Mañana</span>
+                </label>
+                <label class="time-slot-label border border-espresso/20 bg-white rounded-xl p-3 text-center cursor-pointer hover:border-espresso/40 transition-all">
+                  <input type="radio" name="timeslot" value="14:30" class="sr-only">
+                  <span class="block font-mono text-sm font-bold text-espresso">14:30 hs</span>
+                  <span class="block text-[11px] text-espresso-soft">Turno Mediodía</span>
+                </label>
+                <label class="time-slot-label border border-espresso/20 bg-white rounded-xl p-3 text-center cursor-pointer hover:border-espresso/40 transition-all">
+                  <input type="radio" name="timeslot" value="17:00" class="sr-only">
+                  <span class="block font-mono text-sm font-bold text-espresso">17:00 hs</span>
+                  <span class="block text-[11px] text-espresso-soft">Turno Atardecer</span>
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <!-- PASO 3: SERVICIOS ADICIONALES (ADD-ONS) -->
+          <fieldset class="bg-white border border-espresso/15 rounded-2xl p-6 md:p-8 shadow-xs">
+            <legend class="font-fraunces text-2xl text-espresso flex items-center gap-3 px-2">
+              <span class="w-7 h-7 rounded-full bg-copper text-cream font-mono text-sm flex items-center justify-center font-bold">3</span>
+              Servicios & Adicionales Opcionales
+            </legend>
+            <p class="text-sm text-espresso-soft mt-1 mb-6">Personalizá tu visita con experiencias sensoriales y souvenirs temáticos.</p>
+
+            <div class="space-y-3.5">
+
+              <!-- Add-on 1: Pastelería Premium -->
+              <label class="flex items-start justify-between gap-4 p-4 border border-espresso/15 rounded-xl hover:bg-parchment/20 transition-colors cursor-pointer">
+                <div class="flex items-start gap-3">
+                  <input type="checkbox" id="addon-pasteleria" name="addon_pasteleria" class="addon-checkbox mt-1 w-4 h-4 text-copper rounded border-espresso/30 focus:ring-copper" data-usd="6" data-ars="7500" data-per-pax="true">
+                  <div>
+                    <span class="font-semibold text-sm text-espresso block">Maridaje Dulce de Autor (Por persona)</span>
+                    <span class="text-xs text-espresso-soft">Degustación de financiers franceses y alfajor artesanal de pistacho en All Saints.</span>
+                  </div>
+                </div>
+                <span class="text-xs font-mono font-bold text-copper addon-price" data-usd="6" data-ars="7500">+$6 USD /p</span>
+              </label>
+
+              <!-- Add-on 2: Bolsa de Café 250g -->
+              <label class="flex items-start justify-between gap-4 p-4 border border-espresso/15 rounded-xl hover:bg-parchment/20 transition-colors cursor-pointer">
+                <div class="flex items-start gap-3">
+                  <input type="checkbox" id="addon-cafe" name="addon_cafe" class="addon-checkbox mt-1 w-4 h-4 text-copper rounded border-espresso/30 focus:ring-copper" data-usd="12" data-ars="15000" data-per-pax="false">
+                  <div>
+                    <span class="font-semibold text-sm text-espresso block">Bolsa de Café de Especialidad (250g en grano)</span>
+                    <span class="text-xs text-espresso-soft">Tostado fresco en All Saints. Origen Colombia o Etiopía, con ficha de cata y trazabilidad.</span>
+                  </div>
+                </div>
+                <span class="text-xs font-mono font-bold text-copper addon-price" data-usd="12" data-ars="15000">+$12 USD</span>
+              </label>
+
+              <!-- Add-on 3: Libreta Moleskine -->
+              <label class="flex items-start justify-between gap-4 p-4 border border-espresso/15 rounded-xl hover:bg-parchment/20 transition-colors cursor-pointer">
+                <div class="flex items-start gap-3">
+                  <input type="checkbox" id="addon-libreta" name="addon_libreta" class="addon-checkbox mt-1 w-4 h-4 text-copper rounded border-espresso/30 focus:ring-copper" data-usd="8" data-ars="10000" data-per-pax="false">
+                  <div>
+                    <span class="font-semibold text-sm text-espresso block">Libreta de Notas & Rueda de Cata Barista</span>
+                    <span class="text-xs text-espresso-soft">Edición limitada Evolución Espresso para registrar aromas, acidez y cuerpo de cada café.</span>
+                  </div>
+                </div>
+                <span class="text-xs font-mono font-bold text-copper addon-price" data-usd="8" data-ars="10000">+$8 USD</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+          <!-- PASO 4: DATOS DEL TITULAR -->
+          <fieldset class="bg-white border border-espresso/15 rounded-2xl p-6 md:p-8 shadow-xs">
+            <legend class="font-fraunces text-2xl text-espresso flex items-center gap-3 px-2">
+              <span class="w-7 h-7 rounded-full bg-copper text-cream font-mono text-sm flex items-center justify-center font-bold">4</span>
+              Datos del Titular de la Reserva
+            </legend>
+            <p class="text-sm text-espresso-soft mt-1 mb-6">Te enviaremos la confirmación oficial y el voucher con acceso prioritario por email.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              
+              <!-- Nombre y Apellido -->
+              <div>
+                <label for="cust-name" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-1.5">
+                  Nombre Completo <span class="text-red-600">*</span>
+                </label>
+                <input type="text" id="cust-name" name="name" required placeholder="Ej: Camila Rossi" class="w-full h-11 px-3.5 bg-cream border border-espresso/25 rounded-xl text-sm text-espresso placeholder:text-espresso-soft/50 focus:outline-none focus:ring-2 focus:ring-copper focus:border-copper">
+                <span id="name-error" class="text-xs text-red-600 mt-1 hidden block" role="alert">Ingresá tu nombre y apellido (al menos 3 letras).</span>
+              </div>
+
+              <!-- Correo Electrónico -->
+              <div>
+                <label for="cust-email" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-1.5">
+                  Correo Electrónico <span class="text-red-600">*</span>
+                </label>
+                <input type="email" id="cust-email" name="email" required placeholder="ejemplo@correo.com" class="w-full h-11 px-3.5 bg-cream border border-espresso/25 rounded-xl text-sm text-espresso placeholder:text-espresso-soft/50 focus:outline-none focus:ring-2 focus:ring-copper focus:border-copper">
+                <span id="email-error" class="text-xs text-red-600 mt-1 hidden block" role="alert">Ingresá una dirección de correo válida.</span>
+              </div>
+
+              <!-- Teléfono / WhatsApp -->
+              <div>
+                <label for="cust-phone" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-1.5">
+                  Teléfono / WhatsApp <span class="text-red-600">*</span>
+                </label>
+                <input type="tel" id="cust-phone" name="phone" required placeholder="Ej: +54 9 11 4567-8900" class="w-full h-11 px-3.5 bg-cream border border-espresso/25 rounded-xl text-sm text-espresso placeholder:text-espresso-soft/50 focus:outline-none focus:ring-2 focus:ring-copper focus:border-copper">
+                <span id="phone-error" class="text-xs text-red-600 mt-1 hidden block" role="alert">Ingresá un teléfono de contacto válido (mín. 8 dígitos).</span>
+              </div>
+
+              <!-- Preferencias Dietarias -->
+              <div>
+                <label for="cust-diet" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-1.5">
+                  Preferencias / Dietas Especiales
+                </label>
+                <select id="cust-diet" name="diet" class="w-full h-11 px-3.5 bg-cream border border-espresso/25 rounded-xl text-sm text-espresso focus:outline-none focus:ring-2 focus:ring-copper focus:border-copper">
+                  <option value="ninguna">Sin restricciones dietarias</option>
+                  <option value="vegetariano">Vegetariano / Leche vegetal (Avena / Almendras)</option>
+                  <option value="celiaco">Opciones sin TACC (Apto celíacos en pastelería)</option>
+                  <option value="descafeinado">Preferencia de café descafeinado de origen</option>
+                </select>
+              </div>
+
+            </div>
+
+            <!-- Notas Especiales -->
+            <div class="mt-5">
+              <label for="cust-notes" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-1.5">
+                Comentarios Adicionales (Opcional)
+              </label>
+              <textarea id="cust-notes" name="notes" rows="2" placeholder="¿Celebrás un cumpleaños o necesitás asistencia especial de movilidad?" class="w-full px-3.5 py-2.5 bg-cream border border-espresso/25 rounded-xl text-sm text-espresso placeholder:text-espresso-soft/50 focus:outline-none focus:ring-2 focus:ring-copper focus:border-copper"></textarea>
+            </div>
+
+          </fieldset>
+
+        </form>
+
+        <!-- ═══ RESUMEN EN TIEMPO REAL (STICKY SIDEBAR) ═══ -->
+        <aside class="sticky top-24 bg-crowshead text-cream rounded-2xl p-6 md:p-8 shadow-xl border border-cream/15" aria-labelledby="summary-heading">
+          <div class="flex items-center justify-between pb-4 border-b border-cream/15">
+            <h2 id="summary-heading" class="font-fraunces text-2xl text-cream font-semibold">Resumen en Vivo</h2>
+            <span id="summary-currency-tag" class="text-xs font-mono bg-copper px-2.5 py-1 rounded-full text-cream font-bold">USD</span>
+          </div>
+
+          <div class="py-5 space-y-3.5 text-sm border-b border-cream/15">
+            <!-- Paquete -->
+            <div class="flex justify-between items-start gap-2">
+              <div>
+                <span id="summary-package-name" class="font-medium text-cream block">Recorrido Completo</span>
+                <span id="summary-pax-count" class="text-xs text-cream/70 font-mono">2 personas × $35 USD</span>
+              </div>
+              <span id="summary-base-total" class="font-mono font-semibold text-cream text-right">$70 USD</span>
+            </div>
+
+            <!-- Adicionales desglosados -->
+            <div id="summary-addons-list" class="space-y-1.5 pt-1 text-xs text-cream/80 border-t border-cream/10">
+              <div class="text-cream/50 italic">Sin adicionales seleccionados</div>
+            </div>
+
+            <!-- Descuento grupal -->
+            <div id="summary-discount-row" class="hidden justify-between items-center text-xs text-emerald-400 font-semibold pt-1">
+              <span>Descuento de Grupo (15% OFF)</span>
+              <span id="summary-discount-val">-$10.50 USD</span>
+            </div>
+
+            <!-- IVA discriminado informativo -->
+            <div class="flex justify-between items-center text-xs text-cream/60 pt-2 border-t border-cream/10">
+              <span>Impuestos / IVA (21% incluido)</span>
+              <span id="summary-tax-val" class="font-mono">$12.15 USD</span>
+            </div>
+          </div>
+
+          <!-- Total a pagar -->
+          <div class="pt-5 pb-6">
+            <span class="text-xs font-mono uppercase tracking-wider text-copper block">Total Final Estimado</span>
+            <div class="flex items-baseline justify-between mt-1">
+              <span id="summary-total-price" class="font-fraunces text-4xl md:text-5xl font-bold text-cream">$70 USD</span>
+              <span id="summary-alt-currency" class="text-xs font-mono text-cream/70 text-right">≈ $87.500 ARS</span>
+            </div>
+          </div>
+
+          <!-- Botón de Envío -->
+          <button type="submit" form="booking-form" id="btn-submit-booking" class="w-full bg-copper hover:bg-copper-deep text-cream font-bold py-4 px-6 rounded-xl shadow-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-crowshead focus:ring-copper flex items-center justify-center gap-2 cursor-pointer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            Confirmar Reserva
+          </button>
+
+          <!-- Micro-garantías de seguridad -->
+          <ul class="mt-5 space-y-2 text-[11px] text-cream/65">
+            <li class="flex items-center gap-2">
+              <span class="text-copper">✓</span> Reserva garantizada · Pago en el punto de encuentro
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-copper">✓</span> Cancelación libre sin penalidad hasta 24 hs previas
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-copper">✓</span> Cupos reducidos para cata y atención personalizada
+            </li>
+          </ul>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ═══ SECCIÓN 3.4: FORMULARIO DE CONTACTO Y CONSULTAS ═══ -->
+    <section id="contacto" class="bg-parchment/80 border-t border-espresso/15 py-16 md:py-20" aria-labelledby="contact-heading">
+      <div class="max-w-4xl mx-auto px-5 md:px-[59px]">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="font-mono text-xs uppercase tracking-[0.25em] text-copper block mb-2">Atención & Consultas</span>
+          <h2 id="contact-heading" class="font-fraunces text-3xl md:text-4xl text-espresso font-semibold">
+            ¿Tenés alguna duda o requerimiento especial?
+          </h2>
+          <p class="text-sm md:text-base text-espresso-soft mt-3">
+            Escribinos para coordinar visitas privadas para empresas, notas periodísticas, o si tenés sugerencias sobre el recorrido.
+          </p>
+        </div>
+
+        <form id="contact-form" novalidate class="bg-white border border-espresso/15 rounded-2xl p-6 md:p-10 shadow-xs space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Nombre -->
+            <div>
+              <label for="contact-name" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-1.5">
+                Nombre Completo <span class="text-red-600">*</span>
+              </label>
+              <input type="text" id="contact-name" name="c_name" required placeholder="Tu nombre" class="w-full h-11 px-3.5 bg-cream border border-espresso/25 rounded-xl text-sm text-espresso placeholder:text-espresso-soft/50 focus:outline-none focus:ring-2 focus:ring-copper focus:border-copper">
+              <span id="c-name-error" class="text-xs text-red-600 mt-1 hidden block" role="alert">Ingresá tu nombre completo.</span>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="contact-email" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-1.5">
+                Correo Electrónico <span class="text-red-600">*</span>
+              </label>
+              <input type="email" id="contact-email" name="c_email" required placeholder="tu@correo.com" class="w-full h-11 px-3.5 bg-cream border border-espresso/25 rounded-xl text-sm text-espresso placeholder:text-espresso-soft/50 focus:outline-none focus:ring-2 focus:ring-copper focus:border-copper">
+              <span id="c-email-error" class="text-xs text-red-600 mt-1 hidden block" role="alert">Ingresá un correo electrónico válido.</span>
+            </div>
+          </div>
+
+          <!-- Motivo de Contacto -->
+          <div>
+            <label for="contact-reason" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-1.5">
+              Motivo de Contacto <span class="text-red-600">*</span>
+            </label>
+            <select id="contact-reason" name="c_reason" required class="w-full h-11 px-3.5 bg-cream border border-espresso/25 rounded-xl text-sm text-espresso focus:outline-none focus:ring-2 focus:ring-copper focus:border-copper">
+              <option value="">Seleccioná un motivo...</option>
+              <option value="consulta">Consulta general sobre el recorrido</option>
+              <option value="corporativo">Reserva corporativa / Grupo privado (>12 personas)</option>
+              <option value="prensa">Prensa, fotografía o divulgación académica</option>
+              <option value="sugerencia">Sugerencia o comentario</option>
+              <option value="reclamo">Reclamo o inconveniente con una reserva</option>
+            </select>
+            <span id="c-reason-error" class="text-xs text-red-600 mt-1 hidden block" role="alert">Seleccioná el motivo de tu mensaje.</span>
+          </div>
+
+          <!-- Mensaje -->
+          <div>
+            <label for="contact-message" class="block text-xs font-mono uppercase tracking-wider text-espresso font-semibold mb-1.5">
+              Mensaje <span class="text-red-600">*</span>
+            </label>
+            <textarea id="contact-message" name="c_message" required rows="4" placeholder="Escribí aquí los detalles de tu consulta..." class="w-full px-3.5 py-2.5 bg-cream border border-espresso/25 rounded-xl text-sm text-espresso placeholder:text-espresso-soft/50 focus:outline-none focus:ring-2 focus:ring-copper focus:border-copper"></textarea>
+            <span id="c-message-error" class="text-xs text-red-600 mt-1 hidden block" role="alert">El mensaje debe tener al menos 10 caracteres.</span>
+          </div>
+
+          <!-- Feedback de envío exitoso -->
+          <div id="contact-success-alert" class="hidden p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-xl text-sm flex items-start gap-3">
+            <span class="text-lg">✅</span>
+            <div>
+              <strong class="font-bold">¡Mensaje enviado con éxito!</strong>
+              <p class="text-xs mt-0.5">Hemos recibido tu consulta. El equipo de Evolución Espresso te responderá a tu correo en un plazo máximo de 24 horas hábiles.</p>
+            </div>
+          </div>
+
+          <!-- Botón de Envío Contacto -->
+          <div class="text-right">
+            <button type="submit" id="btn-submit-contact" class="bg-espresso hover:bg-crowshead text-cream px-8 py-3.5 rounded-xl text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-copper cursor-pointer">
+              Enviar Mensaje
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
   </main>
+
+  <!-- ═══ MODAL DE CONFIRMACIÓN DE RESERVA (COMPROBANTE / VOUCHER) ═══ -->
+  <div id="booking-modal" class="fixed inset-0 z-[100] bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 overflow-y-auto transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true" aria-labelledby="voucher-title">
+    <div class="bg-cream text-espresso rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-espresso/20 relative my-8 transform transition-transform duration-300 scale-95" id="voucher-card">
+      
+      <!-- Botón de cerrar -->
+      <button type="button" id="modal-voucher-close" class="absolute top-4 right-4 text-espresso-soft hover:text-espresso p-2 rounded-full hover:bg-parchment transition-colors focus:outline-none focus:ring-2 focus:ring-copper cursor-pointer" aria-label="Cerrar comprobante">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Encabezado del Voucher -->
+      <div class="text-center pb-5 border-b border-dashed border-espresso/20">
+        <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-2xl mx-auto mb-3 shadow-inner">
+          ✓
+        </div>
+        <span class="font-mono text-xs uppercase tracking-widest text-copper block">Reserva Confirmada</span>
+        <h2 id="voucher-title" class="font-fraunces text-2xl sm:text-3xl text-espresso mt-1">¡Todo listo para tu recorrido!</h2>
+        <p class="text-xs text-espresso-soft mt-1">Guardá tu comprobante para presentarlo en el punto de inicio.</p>
+        
+        <!-- Código de Reserva Alfanumérico -->
+        <div class="inline-block mt-4 bg-espresso text-cream font-mono text-sm px-4 py-1.5 rounded-lg tracking-wider" id="voucher-code-display">
+          VOUCHER #EE-2026-XXXX
+        </div>
+      </div>
+
+      <!-- Detalle de la Operación -->
+      <div class="py-5 space-y-3 text-xs sm:text-sm border-b border-dashed border-espresso/20">
+        <div class="flex justify-between">
+          <span class="text-espresso-soft">Titular:</span>
+          <span id="voucher-cust-name" class="font-semibold text-espresso"></span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-espresso-soft">Email:</span>
+          <span id="voucher-cust-email" class="font-mono text-espresso"></span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-espresso-soft">Experiencia:</span>
+          <span id="voucher-package" class="font-semibold text-espresso text-right"></span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-espresso-soft">Fecha y Turno:</span>
+          <span id="voucher-datetime" class="font-semibold text-espresso"></span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-espresso-soft">Cantidad de Visitantes:</span>
+          <span id="voucher-pax" class="font-semibold text-espresso"></span>
+        </div>
+        <div class="flex justify-between" id="voucher-addons-row">
+          <span class="text-espresso-soft">Adicionales:</span>
+          <span id="voucher-addons" class="text-espresso text-right"></span>
+        </div>
+        <div class="flex justify-between pt-2 border-t border-espresso/10 text-base font-bold">
+          <span class="text-espresso">Importe Total:</span>
+          <span id="voucher-total" class="font-fraunces text-copper text-lg"></span>
+        </div>
+      </div>
+
+      <!-- Acciones -->
+      <div class="pt-6 flex flex-col sm:flex-row gap-3">
+        <button type="button" onclick="window.print()" class="flex-1 bg-espresso hover:bg-crowshead text-cream py-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-copper cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+          </svg>
+          Imprimir Comprobante
+        </button>
+        <button type="button" id="voucher-reset-btn" class="flex-1 border border-espresso/25 text-espresso hover:bg-parchment py-3 rounded-xl text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-copper cursor-pointer">
+          Hacer otra reserva
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="bg-ink text-cream" role="contentinfo">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-10 px-5 md:px-[59px] py-14">
+        <!-- Columna 1 -->
+        <div class="flex flex-col gap-3">
+          <span class="font-fraunces text-2xl leading-8">
+            <span class="text-cream">Evolución</span><span class="text-copper"> Espresso</span>
+          </span>
+          <p class="text-cream/60 text-sm leading-[22.75px]">
+            Un recorrido peatonal y sensorial que contrasta el Café Notable del siglo XIX con el Laboratorio de Especialidad del siglo XXI. Del mármol al método.
+          </p>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="flex flex-col gap-4">
+          <span class="font-mono text-[10.9px] uppercase tracking-[0.25em] text-copper leading-4">El recorrido</span>
+          <ul class="flex flex-col gap-2" aria-label="Información del recorrido">
+            <li class="text-cream/70 text-sm leading-5">Recorridos temáticos</li>
+            <li class="text-cream/70 text-sm leading-5">Gastronomía · Historia · Arquitectura</li>
+            <li class="text-cream/70 text-sm leading-5">Microcentro & Belgrano, CABA</li>
+          </ul>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="flex flex-col gap-4">
+          <span class="font-mono text-[10.9px] uppercase tracking-[0.25em] text-copper leading-4">Navegación</span>
+          <ul class="flex flex-col gap-2" aria-label="Paradas del recorrido">
+            <li><a href="index.html" class="text-cream/70 text-sm leading-5 hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded">Inicio</a></li>
+            <li><a href="tortoni.html" class="text-cream/70 text-sm leading-5 hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded">Café Tortoni · 1858</a></li>
+            <li><a href="allsaints.html" class="text-cream/70 text-sm leading-5 hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded">All Saints Cafe · s. XXI</a></li>
+            <li><a href="#contacto" class="text-cream/70 text-sm leading-5 hover:text-cream transition-colors focus:outline-none focus:ring-2 focus:ring-copper rounded">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-cream/10">
+        <div class="flex flex-col md:flex-row md:justify-between gap-1 px-5 md:px-[59px] py-5">
+          <span class="font-mono text-xs text-cream/40 leading-4">Av. de Mayo 825 → Cdad. de la Paz 2300 · Buenos Aires</span>
+          <span class="font-mono text-xs text-cream/40 leading-4">UADE · Diseño y Desarrollo Web · Grupo 8</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ SCRIPTS DE LÓGICA INTERACTIVA ═══ -->
+  <script>
+    // --- Responsive Menú y Dropdown ---
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const line1 = document.getElementById('hamburger-line-1');
+    const line2 = document.getElementById('hamburger-line-2');
+    const line3 = document.getElementById('hamburger-line-3');
+    let menuOpen = false;
+
+    hamburgerBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      hamburgerBtn.setAttribute('aria-expanded', menuOpen);
+      if (menuOpen) {
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        line1.classList.add('translate-y-2', 'rotate-45');
+        line2.classList.add('opacity-0');
+        line3.classList.add('-translate-y-2', '-rotate-45');
+      } else {
+        mobileMenu.style.maxHeight = '0';
+        line1.classList.remove('translate-y-2', 'rotate-45');
+        line2.classList.remove('opacity-0');
+        line3.classList.remove('-translate-y-2', '-rotate-45');
+      }
+    });
+
+    const mobilePoiBtn = document.getElementById('mobile-poi-btn');
+    const mobilePoiSubmenu = document.getElementById('mobile-poi-submenu');
+    const mobilePoiChevron = document.getElementById('mobile-poi-chevron');
+    let poiOpen = false;
+
+    mobilePoiBtn.addEventListener('click', () => {
+      poiOpen = !poiOpen;
+      mobilePoiBtn.setAttribute('aria-expanded', poiOpen);
+      if (poiOpen) {
+        mobilePoiSubmenu.style.maxHeight = mobilePoiSubmenu.scrollHeight + 'px';
+        mobilePoiChevron.classList.add('rotate-180');
+      } else {
+        mobilePoiSubmenu.style.maxHeight = '0';
+        mobilePoiChevron.classList.remove('rotate-180');
+      }
+      if (menuOpen) {
+        setTimeout(() => {
+          mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        }, 210);
+      }
+    });
+
+    const dropdownDesktop = document.getElementById('dropdown-desktop');
+    const dropdownBtnDesktop = document.getElementById('dropdown-btn-desktop');
+    const dropdownMenuDesktop = document.getElementById('dropdown-menu-desktop');
+
+    dropdownBtnDesktop.addEventListener('click', () => {
+      const isExpanded = dropdownBtnDesktop.getAttribute('aria-expanded') === 'true';
+      dropdownBtnDesktop.setAttribute('aria-expanded', !isExpanded);
+      if (!isExpanded) {
+        dropdownMenuDesktop.classList.remove('opacity-0', 'invisible');
+        dropdownMenuDesktop.classList.add('opacity-100', 'visible');
+      } else {
+        dropdownMenuDesktop.classList.add('opacity-0', 'invisible');
+        dropdownMenuDesktop.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdownDesktop.contains(e.target)) {
+        dropdownBtnDesktop.setAttribute('aria-expanded', 'false');
+        dropdownMenuDesktop.classList.add('opacity-0', 'invisible');
+        dropdownMenuDesktop.classList.remove('opacity-100', 'visible');
+      }
+    });
+
+    // ═══ MOTOR DE CÁLCULO DE RESERVAS Y CONVERSIÓN DE MONEDA ═══
+    const EXCHANGE_RATE = 1250; // 1 USD = 1250 ARS (Banco Nación)
+    let currentCurrency = 'USD'; // 'USD' o 'ARS'
+    let currentPax = 2;
+
+    const PACKAGES = {
+      completo:  { name: 'Recorrido Completo: Del Mármol al Método', usd: 35, ars: 43750 },
+      tortoni:   { name: 'Liturgia Porteña: Café Tortoni (1858)', usd: 20, ars: 25000 },
+      allsaints: { name: 'Tercera Ola: All Saints Cafe (s. XXI)', usd: 22, ars: 27500 }
+    };
+
+    // Restringir fecha mínima a hoy
+    const bookingDateInput = document.getElementById('booking-date');
+    const todayStr = new Date().toISOString().split('T')[0];
+    bookingDateInput.min = todayStr;
+    // Set default a 3 días a futuro
+    const defaultDate = new Date();
+    defaultDate.setDate(defaultDate.getDate() + 3);
+    bookingDateInput.value = defaultDate.toISOString().split('T')[0];
+
+    // Selectores DOM de Moneda
+    const btnUsd = document.getElementById('currency-usd');
+    const btnArs = document.getElementById('currency-ars');
+    const summaryCurrencyTag = document.getElementById('summary-currency-tag');
+    const summaryAltCurrency = document.getElementById('summary-alt-currency');
+
+    function setCurrency(curr) {
+      currentCurrency = curr;
+      if (curr === 'USD') {
+        btnUsd.className = 'px-4 py-2 text-xs md:text-sm font-semibold rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-copper bg-espresso text-cream shadow-xs';
+        btnArs.className = 'px-4 py-2 text-xs md:text-sm font-semibold rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-copper text-espresso hover:bg-cream';
+        btnUsd.setAttribute('aria-checked', 'true');
+        btnArs.setAttribute('aria-checked', 'false');
+        summaryCurrencyTag.textContent = 'USD';
+      } else {
+        btnArs.className = 'px-4 py-2 text-xs md:text-sm font-semibold rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-copper bg-espresso text-cream shadow-xs';
+        btnUsd.className = 'px-4 py-2 text-xs md:text-sm font-semibold rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-copper text-espresso hover:bg-cream';
+        btnArs.setAttribute('aria-checked', 'true');
+        btnUsd.setAttribute('aria-checked', 'false');
+        summaryCurrencyTag.textContent = 'ARS';
+      }
+
+      // Actualizar precios en los paquetes
+      document.querySelectorAll('.package-price').forEach(el => {
+        const usd = el.getAttribute('data-usd');
+        const ars = el.getAttribute('data-ars');
+        el.textContent = curr === 'USD' ? `$${usd} USD` : `$${parseInt(ars).toLocaleString('es-AR')} ARS`;
+      });
+
+      // Actualizar precios en adicionales
+      document.querySelectorAll('.addon-price').forEach(el => {
+        const usd = el.getAttribute('data-usd');
+        const ars = el.getAttribute('data-ars');
+        const isPerPax = el.textContent.includes('/p');
+        el.textContent = curr === 'USD' 
+          ? `+$${usd} USD${isPerPax ? ' /p' : ''}` 
+          : `+$${parseInt(ars).toLocaleString('es-AR')} ARS${isPerPax ? ' /p' : ''}`;
+      });
+
+      updateSummary();
+    }
+
+    btnUsd.addEventListener('click', () => setCurrency('USD'));
+    btnArs.addEventListener('click', () => setCurrency('ARS'));
+
+    // Selector de Paquetes
+    const packageCards = document.querySelectorAll('.package-option');
+    packageCards.forEach(card => {
+      card.addEventListener('click', () => {
+        packageCards.forEach(c => {
+          c.classList.remove('border-copper', 'bg-parchment/30', 'border-2');
+          c.classList.add('border-espresso/20', 'bg-white', 'border');
+        });
+        card.classList.remove('border-espresso/20', 'bg-white', 'border');
+        card.classList.add('border-copper', 'bg-parchment/30', 'border-2');
+        updateSummary();
+      });
+    });
+
+    // Contador de Personas
+    const paxInput = document.getElementById('participants-input');
+    const btnDecreasePax = document.getElementById('btn-decrease-pax');
+    const btnIncreasePax = document.getElementById('btn-increase-pax');
+    const groupDiscountBadge = document.getElementById('group-discount-badge');
+
+    btnDecreasePax.addEventListener('click', () => {
+      if (currentPax > 1) {
+        currentPax--;
+        paxInput.value = currentPax;
+        checkGroupDiscount();
+        updateSummary();
+      }
+    });
+
+    btnIncreasePax.addEventListener('click', () => {
+      if (currentPax < 12) {
+        currentPax++;
+        paxInput.value = currentPax;
+        checkGroupDiscount();
+        updateSummary();
+      }
+    });
+
+    function checkGroupDiscount() {
+      if (currentPax >= 4) {
+        groupDiscountBadge.classList.remove('hidden');
+        groupDiscountBadge.classList.add('flex');
+      } else {
+        groupDiscountBadge.classList.remove('flex');
+        groupDiscountBadge.classList.add('hidden');
+      }
+    }
+
+    // Turnos de Horario
+    const timeSlots = document.querySelectorAll('.time-slot-label');
+    timeSlots.forEach(slot => {
+      slot.addEventListener('click', () => {
+        timeSlots.forEach(s => {
+          s.classList.remove('border-copper', 'bg-parchment/40', 'border-2');
+          s.classList.add('border-espresso/20', 'bg-white', 'border');
+        });
+        slot.classList.remove('border-espresso/20', 'bg-white', 'border');
+        slot.classList.add('border-copper', 'bg-parchment/40', 'border-2');
+      });
+    });
+
+    // Checkboxes de Adicionales
+    document.querySelectorAll('.addon-checkbox').forEach(cb => {
+      cb.addEventListener('change', updateSummary);
+    });
+
+    // Función Central de Actualización del Resumen y Precios
+    function updateSummary() {
+      const selectedPkgRadio = document.querySelector('input[name="package"]:checked') || document.querySelector('input[name="package"]');
+      const pkgKey = selectedPkgRadio ? selectedPkgRadio.value : 'completo';
+      const pkgData = PACKAGES[pkgKey];
+
+      // Base price
+      const unitPrice = currentCurrency === 'USD' ? pkgData.usd : pkgData.ars;
+      const baseSubtotal = unitPrice * currentPax;
+
+      // Update package info in summary
+      document.getElementById('summary-package-name').textContent = pkgData.name.split(':')[0];
+      document.getElementById('summary-pax-count').textContent = `${currentPax} ${currentPax === 1 ? 'persona' : 'personas'} × $${currentCurrency === 'USD' ? unitPrice : unitPrice.toLocaleString('es-AR')} ${currentCurrency}`;
+      document.getElementById('summary-base-total').textContent = `$${currentCurrency === 'USD' ? baseSubtotal : baseSubtotal.toLocaleString('es-AR')} ${currentCurrency}`;
+
+      // Calculate add-ons
+      const addonsContainer = document.getElementById('summary-addons-list');
+      addonsContainer.innerHTML = '';
+      let addonsSubtotal = 0;
+      let hasAddons = false;
+
+      const addons = [
+        { id: 'addon-pasteleria', name: 'Maridaje Dulce de Autor', el: document.getElementById('addon-pasteleria') },
+        { id: 'addon-cafe', name: 'Bolsa Café 250g Especialidad', el: document.getElementById('addon-cafe') },
+        { id: 'addon-libreta', name: 'Libreta Moleskine Barista', el: document.getElementById('addon-libreta') }
+      ];
+
+      addons.forEach(ad => {
+        if (ad.el && ad.el.checked) {
+          hasAddons = true;
+          const isPerPax = ad.el.getAttribute('data-per-pax') === 'true';
+          const adUsd = parseFloat(ad.el.getAttribute('data-usd'));
+          const adArs = parseFloat(ad.el.getAttribute('data-ars'));
+          const adUnitPrice = currentCurrency === 'USD' ? adUsd : adArs;
+          const cost = isPerPax ? adUnitPrice * currentPax : adUnitPrice;
+          addonsSubtotal += cost;
+
+          const row = document.createElement('div');
+          row.className = 'flex justify-between items-center';
+          row.innerHTML = `
+            <span>+ ${ad.name} ${isPerPax ? `(×${currentPax})` : ''}</span>
+            <span class="font-mono">$${currentCurrency === 'USD' ? cost : cost.toLocaleString('es-AR')} ${currentCurrency}</span>
+          `;
+          addonsContainer.appendChild(row);
+        }
+      });
+
+      if (!hasAddons) {
+        addonsContainer.innerHTML = '<div class="text-cream/50 italic">Sin adicionales seleccionados</div>';
+      }
+
+      // Calculate group discount (15% on base if pax >= 4)
+      let discount = 0;
+      const discountRow = document.getElementById('summary-discount-row');
+      if (currentPax >= 4) {
+        discount = baseSubtotal * 0.15;
+        discountRow.classList.remove('hidden');
+        discountRow.classList.add('flex');
+        document.getElementById('summary-discount-val').textContent = `-$${currentCurrency === 'USD' ? discount.toFixed(2) : Math.round(discount).toLocaleString('es-AR')} ${currentCurrency}`;
+      } else {
+        discountRow.classList.remove('flex');
+        discountRow.classList.add('hidden');
+      }
+
+      // Total final
+      const grandTotal = baseSubtotal + addonsSubtotal - discount;
+      const taxAmount = grandTotal * 0.21 / 1.21; // IVA informativo 21%
+
+      document.getElementById('summary-tax-val').textContent = `$${currentCurrency === 'USD' ? taxAmount.toFixed(2) : Math.round(taxAmount).toLocaleString('es-AR')} ${currentCurrency}`;
+      
+      const totalPriceEl = document.getElementById('summary-total-price');
+      totalPriceEl.textContent = currentCurrency === 'USD' 
+        ? `$${grandTotal.toFixed(2)} USD` 
+        : `$${Math.round(grandTotal).toLocaleString('es-AR')} ARS`;
+
+      // Alt currency preview
+      if (currentCurrency === 'USD') {
+        const totalArs = grandTotal * EXCHANGE_RATE;
+        summaryAltCurrency.textContent = `≈ $${Math.round(totalArs).toLocaleString('es-AR')} ARS`;
+      } else {
+        const totalUsd = grandTotal / EXCHANGE_RATE;
+        summaryAltCurrency.textContent = `≈ $${totalUsd.toFixed(2)} USD`;
+      }
+    }
+
+    // Inicializar cálculo inicial
+    updateSummary();
+
+    // ═══ VALIDACIÓN Y ENVÍO DEL FORMULARIO DE RESERVAS ═══
+    const bookingForm = document.getElementById('booking-form');
+    const custName = document.getElementById('cust-name');
+    const custEmail = document.getElementById('cust-email');
+    const custPhone = document.getElementById('cust-phone');
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const phoneError = document.getElementById('phone-error');
+    const dateError = document.getElementById('date-error');
+
+    const bookingModal = document.getElementById('booking-modal');
+    const modalVoucherClose = document.getElementById('modal-voucher-close');
+    const voucherResetBtn = document.getElementById('voucher-reset-btn');
+
+    bookingForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isValid = true;
+
+      // Validar Nombre (al menos 3 letras)
+      if (!custName.value.trim() || custName.value.trim().length < 3) {
+        nameError.classList.remove('hidden');
+        custName.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        nameError.classList.add('hidden');
+        custName.classList.remove('border-red-500');
+      }
+
+      // Validar Email con regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(custEmail.value.trim())) {
+        emailError.classList.remove('hidden');
+        custEmail.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        emailError.classList.add('hidden');
+        custEmail.classList.remove('border-red-500');
+      }
+
+      // Validar Teléfono (mínimo 8 dígitos)
+      const phoneDigits = custPhone.value.replace(/\D/g, '');
+      if (phoneDigits.length < 8) {
+        phoneError.classList.remove('hidden');
+        custPhone.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        phoneError.classList.add('hidden');
+        custPhone.classList.remove('border-red-500');
+      }
+
+      // Validar Fecha
+      if (!bookingDateInput.value || bookingDateInput.value < todayStr) {
+        dateError.classList.remove('hidden');
+        bookingDateInput.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        dateError.classList.add('hidden');
+        bookingDateInput.classList.remove('border-red-500');
+      }
+
+      if (!isValid) {
+        const firstError = document.querySelector('.border-red-500');
+        if (firstError) firstError.focus();
+        return;
+      }
+
+      // Si todo es válido -> Generar Voucher y Mostrar Modal
+      showVoucherModal();
+    });
+
+    function showVoucherModal() {
+      // Código de voucher aleatorio
+      const randomCode = Math.random().toString(36).substring(2, 6).toUpperCase();
+      document.getElementById('voucher-code-display').textContent = `VOUCHER #EE-2026-${randomCode}`;
+
+      // Datos del cliente
+      document.getElementById('voucher-cust-name').textContent = custName.value.trim();
+      document.getElementById('voucher-cust-email').textContent = custEmail.value.trim();
+
+      // Paquete
+      const selectedPkgRadio = document.querySelector('input[name="package"]:checked') || document.querySelector('input[name="package"]');
+      const pkgKey = selectedPkgRadio ? selectedPkgRadio.value : 'completo';
+      document.getElementById('voucher-package').textContent = PACKAGES[pkgKey].name;
+
+      // Fecha y Turno
+      const selectedTime = document.querySelector('input[name="timeslot"]:checked').value;
+      const dateParts = bookingDateInput.value.split('-');
+      const formattedDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
+      document.getElementById('voucher-datetime').textContent = `${formattedDate} · ${selectedTime} hs`;
+
+      // Cantidad de personas
+      document.getElementById('voucher-pax').textContent = `${currentPax} personas`;
+
+      // Adicionales
+      const selectedAddons = [];
+      if (document.getElementById('addon-pasteleria').checked) selectedAddons.push('Maridaje Dulce');
+      if (document.getElementById('addon-cafe').checked) selectedAddons.push('Café 250g');
+      if (document.getElementById('addon-libreta').checked) selectedAddons.push('Libreta Barista');
+      
+      const voucherAddonsEl = document.getElementById('voucher-addons');
+      if (selectedAddons.length > 0) {
+        voucherAddonsEl.textContent = selectedAddons.join(', ');
+      } else {
+        voucherAddonsEl.textContent = 'Ninguno';
+      }
+
+      // Total
+      document.getElementById('voucher-total').textContent = document.getElementById('summary-total-price').textContent;
+
+      // Abrir modal
+      bookingModal.classList.remove('hidden');
+      bookingModal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+
+      requestAnimationFrame(() => {
+        bookingModal.classList.remove('opacity-0');
+        bookingModal.classList.add('opacity-100');
+        document.getElementById('voucher-card').classList.remove('scale-95');
+        document.getElementById('voucher-card').classList.add('scale-100');
+      });
+
+      modalVoucherClose.focus();
+    }
+
+    function closeVoucherModal() {
+      bookingModal.classList.remove('opacity-100');
+      bookingModal.classList.add('opacity-0');
+      document.getElementById('voucher-card').classList.remove('scale-100');
+      document.getElementById('voucher-card').classList.add('scale-95');
+
+      setTimeout(() => {
+        bookingModal.classList.remove('flex');
+        bookingModal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }, 250);
+    }
+
+    modalVoucherClose.addEventListener('click', closeVoucherModal);
+    voucherResetBtn.addEventListener('click', () => {
+      closeVoucherModal();
+      bookingForm.reset();
+      currentPax = 2;
+      paxInput.value = 2;
+      checkGroupDiscount();
+      updateSummary();
+    });
+
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) {
+        closeVoucherModal();
+      }
+    });
+
+    // ═══ VALIDACIÓN Y ENVÍO DEL FORMULARIO DE CONTACTO (SECCIÓN 3.4) ═══
+    const contactForm = document.getElementById('contact-form');
+    const cName = document.getElementById('contact-name');
+    const cEmail = document.getElementById('contact-email');
+    const cReason = document.getElementById('contact-reason');
+    const cMessage = document.getElementById('contact-message');
+    const cSuccessAlert = document.getElementById('contact-success-alert');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isContactValid = true;
+
+      // Nombre
+      if (!cName.value.trim() || cName.value.trim().length < 3) {
+        document.getElementById('c-name-error').classList.remove('hidden');
+        cName.classList.add('border-red-500');
+        isContactValid = false;
+      } else {
+        document.getElementById('c-name-error').classList.add('hidden');
+        cName.classList.remove('border-red-500');
+      }
+
+      // Email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(cEmail.value.trim())) {
+        document.getElementById('c-email-error').classList.remove('hidden');
+        cEmail.classList.add('border-red-500');
+        isContactValid = false;
+      } else {
+        document.getElementById('c-email-error').classList.add('hidden');
+        cEmail.classList.remove('border-red-500');
+      }
+
+      // Motivo
+      if (!cReason.value) {
+        document.getElementById('c-reason-error').classList.remove('hidden');
+        cReason.classList.add('border-red-500');
+        isContactValid = false;
+      } else {
+        document.getElementById('c-reason-error').classList.add('hidden');
+        cReason.classList.remove('border-red-500');
+      }
+
+      // Mensaje (mínimo 10 caracteres)
+      if (!cMessage.value.trim() || cMessage.value.trim().length < 10) {
+        document.getElementById('c-message-error').classList.remove('hidden');
+        cMessage.classList.add('border-red-500');
+        isContactValid = false;
+      } else {
+        document.getElementById('c-message-error').classList.add('hidden');
+        cMessage.classList.remove('border-red-500');
+      }
+
+      if (!isContactValid) {
+        const firstErr = contactForm.querySelector('.border-red-500');
+        if (firstErr) firstErr.focus();
+        return;
+      }
+
+      // Éxito simulado
+      cSuccessAlert.classList.remove('hidden');
+      contactForm.reset();
+      
+      // Auto-ocultar después de 6 segundos
+      setTimeout(() => {
+        cSuccessAlert.classList.add('hidden');
+      }, 6000);
+    });
+  </script>
+
+  <!-- Asistente Virtual / Barista Bot (Actividad 3 · Sección 3.6) -->
+  <script src="./js/assistant.js" defer></script>
+
 </body>
 </html>
-
