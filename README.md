@@ -11,63 +11,139 @@
 
 * 🌐 **Sitio Web Desplegado (GitHub Pages):** [https://facuz45.github.io/desarrollo-web-actividad3/](https://facuz45.github.io/desarrollo-web-actividad3/)
 * 📦 **Repositorio Público en GitHub:** [https://github.com/facuz45/desarrollo-web-actividad3](https://github.com/facuz45/desarrollo-web-actividad3)
-* 🎨 **Prototipo Interactivo en Figma:** [https://www.figma.com/design/bSuPvEj3CiUSqETOQwXHwV/Actividad-2---Desarrollo-Web?node-id=0-1](https://www.figma.com/design/bSuPvEj3CiUSqETOQwXHwV/Actividad-2---Desarrollo-Web?node-id=0-1)
+* 🎨 **Prototipo Interactivo en Figma:** [Ver Prototipo en Figma](https://www.figma.com/design/bSuPvEj3CiUSqETOQwXHwV/Actividad-2---Desarrollo-Web?node-id=0-1)
+* 📐 **Design System y Tokens en Figma:** [Ver Design System en Figma](https://www.figma.com/design/bSuPvEj3CiUSqETOQwXHwV/Actividad-2---Desarrollo-Web?node-id=0-1)
 
 ---
 
-## 👥 Integrantes y División de Responsabilidades
+## 👥 Integrantes y Descripción de Contribuciones
 
-| Integrante | Rol / Responsabilidad en la Implementación |
+| Integrante | Rol y Contribuciones en la Implementación |
 | :--- | :--- |
-| **Facundo Zega** | • Maquetación y desarrollo de la **Página Principal (`index.html`)**.<br>• Desarrollo del Punto de Interés 1: **Café Tortoni (`tortoni.html`)**.<br>• Integración inicial de Tailwind CSS CDN, paleta de colores del Design System y modal lightbox para imágenes.<br>• Configuración del repositorio y despliegue en GitHub Pages. |
-| **Facundo Tisch** | • Desarrollo completo del Punto de Interés 2: **All Saints Cafe (`allsaints.html`)**.<br>• Desarrollo de la página y motor interactivo de **Reservas (`reserva.html`)** con cálculo dinámico en tiempo real y selector de divisas (USD / ARS).<br>• Implementación del **Formulario de Contacto** con validación nativa JavaScript.<br>• Desarrollo del **Asistente Virtual / Barista Bot (`js/assistant.js`)** para asistencia y preguntas frecuentes.<br>• Documentación técnica integral (`README.md`). |
+| **Facundo Zega** | • Maquetación, arquitectura y desarrollo de la **Página Principal (`index.html`)**.<br>• Integración y desarrollo del **Mapa Interactivo con Google Maps API / Embed Service**, incorporando orden sugerido de paradas (1 ➔ 2), georreferenciación de puntos de interés y barra de controles dinámicos de visualización.<br>• Desarrollo completo del Punto de Interés 1: **Café Tortoni (`tortoni.html`)**.<br>• Integración inicial de Tailwind CSS CDN, configuración de tokens de diseño y modal accesible de ampliación fotográfica (lightbox).<br>• Configuración del repositorio y pipeline de despliegue continuo en **GitHub Pages**. |
+| **Facundo Tisch** | • Desarrollo completo del Punto de Interés 2: **All Saints Cafe (`allsaints.html`)**.<br>• Desarrollo de la página y motor interactivo de **Reservas (`reserva.html`)** con cálculo dinámico en tiempo real, selector de divisas (USD / ARS) y voucher de confirmación imprimible.<br>• Implementación del **Formulario de Contacto** con validación nativa JavaScript accesible.<br>• Desarrollo y parametrización del **Asistente Virtual / Barista Bot (`js/assistant.js`)** con respuestas inteligentes y chips de preguntas frecuentes.<br>• Redacción y estructuración de la documentación técnica y académica integral (**`README.md`**) bajo las pautas de la cátedra. |
 
 ---
 
-## ☕ Presentación del Proyecto y Temática
+## ☕ Nombre y Objetivo del Sitio
 
-**Evolución Espresso** es una experiencia autoguiada y pedagógica que contrasta dos paradigmas antagónicos y complementarios de la cultura urbana y gastronómica de Buenos Aires:
+* **Nombre del sitio:** *Evolución Espresso — Del Mármol al Método*
+* **Objetivo del sitio:** Difundir, poner en valor y permitir experimentar de manera inmersiva la profunda transformación cultural, estética, sensorial y técnica que experimentó el café en la Ciudad Autónoma de Buenos Aires a lo largo de más de un siglo y medio. El sitio web guía a los visitantes en un recorrido autoguiado que contrasta el tradicional rito social del "Café Notable" decimonónico con el rigor experimental del "Laboratorio de Café de Especialidad" contemporáneo.
 
-1. **La Liturgia del Café Notable (Siglo XIX):** Encarnada por el **Café Tortoni** (Av. de Mayo 825, Casco Histórico/Monserrat), caracterizado por sus mostradores de roble, mesas de mármol de Carrara, bohemia literaria (Borges, Lorca, Quinquela Martín) y extracción tradicional de espresso.
-2. **El Laboratorio de la Tercera Ola (Siglo XXI):** Representado por **All Saints Cafe** (Ciudad de la Paz 2300, Belgrano), templo de la precisión científica, microtueste a la vista, Brew Bar con métodos de filtrado manual (V60 japonés y Aeropress) y granos arábicos de especialidad con trazabilidad de origen.
+---
 
-El proyecto conecta ambos hitos mediante el eje cívico e histórico de la Ciudad y el **Subte Línea D** (Catedral / 9 de Julio ↔ Juramento), planteando una transición fluida entre la nostalgia patrimonial y la experimentación contemporánea.
+## 🗺️ Tema y Categoría del Recorrido
+
+* **Tema del recorrido:** La transición entre dos paradigmas antagónicos y complementarios de la cultura urbana y gastronómica de Buenos Aires:
+  1. **La Liturgia del Café Notable (Siglo XIX):** Representada por el **Café Tortoni** (Av. de Mayo 825, Casco Histórico/Monserrat), caracterizado por sus mesas de mármol de Carrara, bohemia literaria e intelectual (Borges, García Lorca, Quinquela Martín), vitrales franceses y la clásica extracción espresso en vajilla de loza gruesa.
+  2. **El Laboratorio de la Tercera Ola (Siglo XXI):** Representado por **All Saints Cafe** (Ciudad de la Paz 2300, Belgrano), un espacio donde convergen la química, el microtueste a la vista, granos arábicos de especialidad con trazabilidad de origen y el Brew Bar con métodos manuales (V60 japonés y Aeropress).
+* **Categoría del recorrido:** Recorrido temático urbano, gastronómico, histórico y arquitectónico / Itinerario autoguiado peatonal y en transporte público (*Walking & Transit Tour*). El circuito se enlaza mediante el eje cívico-histórico porteño y el **Subte Línea D** (Catedral / 9 de Julio ↔ Juramento).
+
+---
+
+## 🎯 Público Destinatario
+
+El sitio web está diseñado contemplando distintos perfiles de usuarios:
+1. **Aficionados al café y cultura barista:** Consumidores interesados en métodos de extracción de especialidad (filtrados, tueste, calibración espresso) así como en la apreciación de perfiles sensoriales clásicos frente a modernos.
+2. **Turistas nacionales e internacionales:** Visitantes que buscan experiencias culturales y gastronómicas auténticas en Buenos Aires, con información práctica, geolocalizada y bimonetaria (USD y ARS).
+3. **Estudiantes y entusiastas del patrimonio urbano:** Personas interesadas en la arquitectura porteña, la bohemia del siglo XIX y la resignificación de espacios urbanos en barrios tradicionales.
+4. **Comunidad local y paseantes urbanos:** Residentes que desean realizar salidas de fin de semana autoguiadas con itinerarios claros, tiempos estimados y opciones de reserva accesibles.
+
+---
+
+## 💡 Funcionalidades Principales
+
+### 1. Página Principal (`index.html`)
+* **Hero Section Conceptual:** Presentación con claim "Del mármol al método" y accesos directos de llamada a la acción (CTA).
+* **Bloque Comparativo Histórico:** Contraste técnico, sensorial y arquitectónico entre la época del mármol y la era de la especialidad.
+* **Mapa Interactivo con Google Maps API:**
+  * Componente cartográfico dinámico que localiza con precisión georreferenciada ambas paradas del recorrido y el trazado de enlace.
+  * **Indicador de Orden Sugerido (Paso a Paso):**
+    * *Parada 1 (Inicio):* Café Tortoni (1858) · Av. de Mayo 825.
+    * *Tramo de Enlace:* Conexión en Subte Línea D (~25 min) o caminata urbana.
+    * *Parada 2 (Destino):* All Saints Cafe (s. XXI) · Ciudad de la Paz 2300.
+  * **Barra de Controles de Vista:** Botones para alternar instantáneamente entre la vista de *Trazado Completo (1 ➔ 2)*, foco en *Café Tortoni* y foco en *All Saints Cafe*.
+  * **Integración con Navegación Externa:** Botón de enlace directo para abrir el itinerario en la aplicación de Google Maps con cálculo de ruta en tiempo real.
+  * Botones integrados para saltar directamente a las páginas de cada parada (`tortoni.html` y `allsaints.html`).
+* **Tarjetas de Paradas (POI Cards):** Resumen visual interactivo con ambientación fotográfica, datos clave y enlace al contenido extendido.
+* **Navegación Responsive y Accesible:** Menú hamburguesa animado con trampa de foco, submenú desplegable y dropdown de navegación rápida.
+
+### 2. Páginas de Puntos de Interés (`tortoni.html` y `allsaints.html`)
+* **Narrativa Inmersiva:** Historia, contexto arquitectónico y sensorial propio de cada cafetería.
+* **Ficha Técnica y Práctica:** Dirección exacta, medios de pago, transporte (Líneas de subte A y D), horarios y accesibilidad motriz.
+* **Laboratorio Sensorial / Método de Preparación:** Explicación técnica del espresso tradicional frente a métodos de filtrado manual (V60 y Aeropress).
+* **Galería Fotográfica con Modal Lightbox:** Visualizador a pantalla completa con navegación por teclado (`Escape`), foco atrapado y atributos `aria-modal`.
+* **Navegación Cruzada:** Botones al pie para continuar fluidamente al siguiente hito del recorrido.
+
+### 3. Motor de Reservas y Presupuesto Dinámico (`reserva.html`)
+* **Selector Bimonetario (USD / ARS):** Conversión automática en tiempo real de todos los precios del formulario con tipo de cambio transparente (1 USD = $1.250 ARS).
+* **Experiencias Seleccionables:** 3 paquetes (Recorrido Completo, Liturgia Tortoni, Laboratorio All Saints).
+* **Ajuste Dinámico de Cupos:** Descuento grupal automático del 15% para grupos de 4 o más participantes.
+* **Adicionales Opcionales (Add-ons):** Selección reactiva de pastelería de autor, bolsas de café de especialidad y libretas de cata.
+* **Panel de Resumen Sticky:** Cálculo en vivo de subtotales, descuentos, adicionales e IVA desglosado.
+* **Voucher de Confirmación:** Generador de código único de reserva (`#EE-2026-XXXX`) con resumen formal y botón para imprimir o guardar comprobante (`window.print()`).
+
+### 4. Formulario de Contacto Accesible (`reserva.html#contacto`)
+* Validación nativa en JavaScript con expresiones regulares para correo electrónico, longitud mínima de mensaje y campos obligatorios.
+* Alertas contextuales y mensaje de confirmación visible al completar el envío.
+
+### 5. Asistente Virtual / Barista Bot (`js/assistant.js`)
+* Widget flotante conversacional accesible en todas las páginas del sitio.
+* Chips de acceso rápido a consultas frecuentes (cómo viajar en subte Línea D, horarios, contraste de tostados, reservas).
+* Motor de búsqueda por palabras clave en lenguaje natural con indicador visual de tipeo.
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
-En estricto cumplimiento de las consignas de la cátedra:
-* **HTML5 Semántico:** Uso de etiquetas estructurales (`header`, `nav`, `main`, `section`, `article`, `aside`, `figure`, `figcaption`, `footer`) que optimizan el SEO y la accesibilidad para lectores de pantalla.
-* **Tailwind CSS (CDN):** Framework de utilidades configurado con los tokens de diseño (Design Tokens) definidos en la Actividad 2:
-  * Paleta cromática: `espresso` (`#2A1D16`), `crowshead` (`#241009`), `copper` (`#B06B34`), `cream` (`#F4EDE2`), `parchment` (`#F3E7D6`), `steel` (`#3E4B52`).
-  * Tipografías: `Fraunces` (serif displays para títulos), `Inter` (sans-serif para lectura en pantalla) y `JetBrains Mono` (fichas técnicas y kickers).
-* **JavaScript Nativo (ES6+):** Sin frameworks de frontend (React, Vue, Angular) ni librerías CSS externas ajenas a Tailwind. Empleado para:
-  * Manipulación reactiva del DOM y cálculo dinámico de presupuestos.
-  * Validación exhaustiva de formularios y manejo accesible de estados de error.
-  * Modales accesibles (lightbox fotográfico y voucher de confirmación).
-  * Asistente virtual interactivo con base de conocimiento y respuestas contextuales.
+* **HTML5 Semántico:** Uso exhaustivo de etiquetas con valor estructural (`header`, `nav`, `main`, `section`, `article`, `aside`, `figure`, `figcaption`, `footer`), optimizando la accesibilidad y el SEO.
+* **Tailwind CSS (CDN):** Framework de utilidades configurado con los tokens de diseño del proyecto:
+  * *Paleta Cromática:* `espresso` (`#2A1D16`), `crowshead` (`#241009`), `copper` (`#B06B34`), `cream` (`#F4EDE2`), `parchment` (`#F3E7D6`), `steel` (`#3E4B52`).
+  * *Tipografía:* `Fraunces` (serif editorial para títulos), `Inter` (sans-serif para lectura clara en pantalla) y `JetBrains Mono` (fichas técnicas, metadatos y kickers).
+* **JavaScript Nativo (ES6+):** Programación pura sin librerías externas pesadas ni frameworks de frontend, garantizando máxima velocidad de carga:
+  * Manipulación reactiva del DOM para el cotizador y el selector de vistas del mapa.
+  * Validaciones lógicas y manejo de eventos de teclado/foco para accesibilidad.
+* **Google Maps API & Embed Service:** Servicio cartográfico externo para geolocalización, trazado de rutas e interactividad.
+* **Google Fonts CDN:** Carga optimizada de tipografías web.
 
 ---
 
-## 🚀 Estructura de Archivos del Proyecto
+## 🌐 API y Servicios Externos Integrados
+
+### 1. Google Maps (API & Embed Service)
+* **Objetivo de la integración:** Dar cumplimiento estricto a la consigna **3.3 Mapa del recorrido**, proveyendo un mapa interactivo funcional integrado a la navegación del sitio.
+* **Georreferenciación de puntos:**
+  * **Parada 1 (Café Tortoni):** `-34.608418, -58.379162` (Av. de Mayo 825, Casco Histórico).
+  * **Parada 2 (All Saints Cafe):** `-34.562725, -58.456637` (Ciudad de la Paz 2300, Belgrano).
+* **Funcionalidad integrada en JavaScript:**
+  * Vista por defecto con la ruta multimodal completa entre ambos puntos (`saddr` y `daddr`).
+  * Conmutación reactiva de vistas en tiempo real (Recorrido, Parada 1, Parada 2) mediante manipulación controlada del contenedor cartográfico sin recarga de página.
+  * Enlace con protocolo `https://www.google.com/maps/dir/...` para abrir la ruta en tiempo real en la app móvil o de escritorio de Google Maps con soporte para navegación GPS paso a paso.
+* **Resiliencia y compatibilidad:** La implementación utiliza el servicio oficial de Google Maps con diseño responsive, garantizando funcionamiento continuo tanto en GitHub Pages como en entornos locales (`localhost` o `file://`) sin riesgo de bloqueos por claves vencidas.
+
+### 2. Google Fonts API
+* Integración CDN de las fuentes `Fraunces`, `Inter` y `JetBrains Mono` con preconexión (`preconnect`) a `fonts.googleapis.com` y `fonts.gstatic.com` para acelerar los tiempos de renderizado visual (FCP).
+
+---
+
+## 🚀 Estructura General del Proyecto
 
 ```text
 desarrollo-web-actividad3/
 │
-├── index.html            # Página de Inicio: Presentación, propuesta de valor, mapa y tarjetas de paradas
+├── index.html            # Página de Inicio: Presentación, propuesta de valor, mapa interactivo con Google Maps y paradas
 ├── tortoni.html          # Punto de Interés 1: Café Tortoni (Av. de Mayo 825) - Siglo XIX
 ├── allsaints.html        # Punto de Interés 2: All Saints Cafe (Cdad. de la Paz 2300) - Siglo XXI
 ├── reserva.html          # Formulario de Reservas en tiempo real + Formulario de Contacto
-├── README.md             # Documentación técnica y académica del proyecto
+├── README.md             # Documentación técnica y académica integral del proyecto
 │
 ├── js/
-│   └── assistant.js      # Widget flotante interactivo: Asistente Virtual / Barista Bot (FAQ)
+│   └── assistant.js      # Widget interactivo: Asistente Virtual / Barista Bot (FAQ)
 │
 └── img/                  # Activos multimedia optimizados
     ├── logo.png                  # Isologo oficial de Evolución Espresso
     ├── chevron-down.svg          # Iconografía SVG para dropdowns
-    ├── mapa-recorrido.png        # Mapa cartográfico del circuito con marcadores
+    ├── mapa-recorrido.png        # Cartografía de respaldo
     ├── tortoni-hero.png          # Imagen de portada y fondo de Café Tortoni
     ├── tortoni-salon-mesas.png   # Interior histórico de mesas y vitrales
     ├── tortoni-churros-cafe.png  # Merienda tradicional de café y chocolate con churros
@@ -82,73 +158,37 @@ desarrollo-web-actividad3/
 
 ---
 
-## 💡 Funcionalidades Principales Implementadas
+## ♿ Criterios de Accesibilidad y Usabilidad (WCAG 2.1 AA)
 
-### 1. Página Principal (`index.html`)
-* Hero banner con propuesta de valor "Del mármol al método".
-* Bloque comparativo de ambos mundos (Patrimonio vs Especialidad).
-* Tarjetas interactivas de las dos paradas con acceso directo a sus páginas de detalle.
-* Mapa del recorrido con modal lightbox de zoom para inspección cartográfica en alta resolución.
-* Navegación responsive con menú hamburguesa animado y dropdown accesible.
-
-### 2. Páginas de Puntos de Interés (`tortoni.html` y `allsaints.html`)
-* Narrativa histórica y sensorial adaptada a cada época.
-* Tablas de datos prácticos: dirección exacta, cómo llegar (línea A y línea D de subte), medios de pago, accesibilidad y horarios.
-* Fichas técnicas de métodos de preparación: espresso tradicional en loza frente a filtrados V60 y Aeropress.
-* Galería fotográfica interactiva con visualizador lightbox a pantalla completa y trampa de foco (`focus trap`) para accesibilidad.
-* Bloque de recomendación del barista y navegación cruzada entre paradas.
-
-### 3. Motor de Reservas y Cotización en Vivo (`reserva.html`)
-* **Conversión de Moneda en Tiempo Real:** Selector de divisa (`USD` / `ARS`) con tipo de cambio de referencia transparentado (1 USD = $1.250 ARS).
-* **Selección de Paquetes:** 3 experiencias estructuradas (Recorrido Completo, Liturgia Tortoni, Laboratorio All Saints).
-* **Selector Dinámico de Participantes:** Ajuste interactivo de cupos con cálculo automático y **descuento grupal del 15%** para grupos de 4 o más personas.
-* **Servicios Adicionales (Add-ons):** Selección opcional de pastelería artesanal, bolsas de café en grano 250g y libretas de cata barista.
-* **Resumen Sticky en Pantalla:** Desglose permanente de subtotales, adicionales, descuentos aplicados e IVA informativo.
-* **Validación de Datos en JS:** Chequeo estricto de nombre, email válido mediante expresiones regulares, teléfono y fecha futura restringida.
-* **Modal de Confirmación (Voucher):** Generación de identificador único de reserva (`#EE-2026-XXXX`), resumen detallado y función nativa para imprimir comprobante (`window.print()`).
-
-### 4. Formulario de Contacto (`reserva.html#contacto`)
-* Accesible desde el menú y enlaces de pie de página en todo el sitio.
-* Campos obligatorios validados dinámicamente con alertas contextuales (nombre, email, motivo y mensaje mínimo de 10 caracteres).
-* Mensaje de éxito visible con reinicio automático de los campos tras el envío.
-
-### 5. Asistente Virtual / Barista Bot (`js/assistant.js`)
-* Widget flotante en esquina inferior derecha disponible en todas las pantallas.
-* Microinteracción con botón launcher pulsante y modal de diálogo conversacional.
-* Chips de consultas rápidas para preguntas frecuentes (traslado en Subte Línea D, horarios, contraste de sabores, precios y reservas).
-* Motor de búsqueda por palabras clave en lenguaje natural con indicador visual de respuesta ("escribiendo...").
+* **Visibilidad del estado del sistema:** Vistas del mapa activas señalizadas con `aria-selected` y contraste visual reforzado, resumen de reservas actualizado en vivo y retroalimentación inmediata en formularios.
+* **Control y libertad del usuario:** Cierre de modales con tecla `Escape` o clic en backdrop, y restauración accesible del foco (`lastActiveTrigger.focus()`).
+* **Navegación mediante teclado:** Indicadores de foco visibles (`focus:ring-2 focus:ring-copper`) en todos los enlaces, botones y campos interactivos.
+* **Skip to content:** Enlace invisible al inicio de cada documento para saltar directamente al contenido principal (`#contenido-principal`).
+* **Semántica y etiquetado ARIA:** Atributos `role="tab"`, `role="dialog"`, `aria-label`, `aria-expanded` y textos alternativos detallados en todas las imágenes.
 
 ---
 
-## ♿ Accesibilidad y Usabilidad (WCAG & Heurísticas de Nielsen)
+## 💻 Instrucciones para Ejecutar o Consultar el Sitio
 
-* **Visibilidad del estado del sistema:** Indicadores de selección activos en navegación, resumen de precios reactivo y feedback inmediato al interactuar con formularios.
-* **Correspondencia con el mundo real:** Metáforas claras de cafetería, barista, tueste, moneda local y extranjera.
-* **Control y libertad para el usuario:** Cierre de modales con tecla `Escape`, click fuera del backdrop y botones visibles de cierre.
-* **Consistencia y estándares:** Idéntica jerarquía tipográfica, márgenes y patrones de navegación en las 4 páginas.
-* **Prevención de errores y validación:** Limitación de fechas anteriores a hoy en el calendario y validación en vivo antes de permitir el envío de formularios.
-* **Accesibilidad Web (WCAG 2.1 AA):**
-  * Enlace oculto para saltar directamente al contenido principal (`skip-to-content`).
-  * Contrastes tipográficos validados entre textos y fondos (`cream` sobre `espresso`, `crowshead` y `copper`).
-  * Atributos ARIA (`aria-expanded`, `aria-haspopup`, `aria-controls`, `aria-label`, `role="dialog"`, `aria-live="polite"`).
-  * Navegación completa mediante teclado con foco visible (`focus:ring-2 focus:ring-copper`).
+### Opción 1: Consulta Online (Recomendada)
+El sitio se encuentra desplegado y listo para su navegación en:  
+👉 **[https://facuz45.github.io/desarrollo-web-actividad3/](https://facuz45.github.io/desarrollo-web-actividad3/)**
 
----
+### Opción 2: Ejecución Local
+Para clonar y levantar el proyecto en un entorno de desarrollo local:
 
-## 💻 Instrucciones para Ejecución Local
-
-Para visualizar el proyecto localmente sin necesidad de conexión a internet para los archivos estáticos:
-
-1. Clonar el repositorio:
+1. **Clonar el repositorio:**
    ```bash
    git clone https://github.com/facuz45/desarrollo-web-actividad3.git
    cd desarrollo-web-actividad3
    ```
-2. Iniciar un servidor local con Python (o extensión Live Server de VS Code):
-   ```bash
-   python -m http.server 8000
-   ```
-3. Abrir en el navegador:
+2. **Iniciar un servidor HTTP local:**
+   * Con **Python 3:**
+     ```bash
+     python -m http.server 8000
+     ```
+   * O con la extensión **Live Server** de VS Code abriendo el archivo `index.html`.
+3. **Acceder desde el navegador:**
    ```text
    http://localhost:8000/index.html
    ```
