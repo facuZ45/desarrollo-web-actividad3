@@ -1,8 +1,8 @@
 # Evolución Espresso — Del Mármol al Método
 > **Actividad 3: Desarrollo e implementación del sitio web**  
 > **Materia:** Diseño y Desarrollo Web (Código: 16240)  
-> **Universidad:** UADE — Facultad de Comunicación y Diseño · Dpto. de Tecnología Web  
-> **Ciclo Lectivo:** 2025 / 2026  
+> **Universidad:** UADE  
+> **Ciclo Lectivo:** 2026  
 > **Equipo:** Grupo 8  
 
 ---
