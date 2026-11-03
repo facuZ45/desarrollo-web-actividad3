@@ -111,15 +111,19 @@ El sitio web está diseñado contemplando distintos perfiles de usuarios:
 ## 🌐 API y Servicios Externos Integrados
 
 ### 1. Google Maps (API & Embed Service)
-* **Objetivo de la integración:** Dar cumplimiento estricto a la consigna **3.3 Mapa del recorrido**, proveyendo un mapa interactivo funcional integrado a la navegación del sitio.
-* **Georreferenciación de puntos:**
-  * **Parada 1 (Café Tortoni):** `-34.608418, -58.379162` (Av. de Mayo 825, Casco Histórico).
-  * **Parada 2 (All Saints Cafe):** `-34.562725, -58.456637` (Ciudad de la Paz 2300, Belgrano).
-* **Funcionalidad integrada en JavaScript:**
-  * Vista por defecto con la ruta multimodal completa entre ambos puntos (`saddr` y `daddr`).
-  * Conmutación reactiva de vistas en tiempo real (Recorrido, Parada 1, Parada 2) mediante manipulación controlada del contenedor cartográfico sin recarga de página.
-  * Enlace con protocolo `https://www.google.com/maps/dir/...` para abrir la ruta en tiempo real en la app móvil o de escritorio de Google Maps con soporte para navegación GPS paso a paso.
-* **Resiliencia y compatibilidad:** La implementación utiliza el servicio oficial de Google Maps con diseño responsive, garantizando funcionamiento continuo tanto en GitHub Pages como en entornos locales (`localhost` o `file://`) sin riesgo de bloqueos por claves vencidas.
+* **Objetivo de la integración:** Dar cumplimiento estricto a la consigna **3.3 Mapa del recorrido**, incorporando una solución cartográfica interactiva y dinámica que comunique con claridad la propuesta del circuito y el orden de visita.
+* **Dónde y cómo se invoca en el proyecto:**
+  1. **En el Maquetado HTML (`index.html#mapa`):** Se consume el endpoint de servicios de Google Maps a través del componente `<iframe>`, renderizando el mapa en vivo dentro de un contenedor accesible y responsive adaptado al Design System.
+  2. **En el Controlador JavaScript (`index.html` · función `initInteractiveMap`):** Gestiona dinámicamente las llamadas al endpoint cartográfico ante los clics del usuario en las tarjetas de paradas o en la barra de controles, actualizando las vistas sin recargar la página.
+* **Parámetros de la API utilizados:**
+  * `saddr` *(Start Address / Origen):* Dirección de partida (`Cafe Tortoni, Av. de Mayo 825, Buenos Aires`).
+  * `daddr` *(Destination Address / Destino):* Dirección de llegada (`All Saints Cafe, Ciudad de la Paz 2300, Buenos Aires`).
+  * `dirflg=r` *(Direction Flag / Modo de Transporte):* **Configurado obligatoriamente en modo Transporte Público (`r` = transit)**, priorizando el enlace en **Subte Línea D** (Catedral ➔ Juramento) y descartando el modo vehicular/auto que viene por defecto.
+  * `output=embed`: Parametriza la respuesta del servicio cartográfico para su integración embebida fluida.
+  * `q` y `z=17`: Utilizados en las vistas individuales de Parada 1 y Parada 2 para enfocar la cámara con zoom barrial exacto en el punto de interés.
+* **Enlace Universal a Google Maps Directions:**
+  * Se implementó el protocolo oficial `https://www.google.com/maps/dir/?api=1&origin=...&destination=...&travelmode=transit`, garantizando que al presionar el botón *"Cómo llegar en Subte D"*, el usuario abra de inmediato la app o web de Google Maps con el recorrido en transporte público ya seleccionado y listo para iniciar la navegación GPS.
+* **Resiliencia y compatibilidad académica:** Esta arquitectura garantiza funcionamiento continuo en cualquier entorno (GitHub Pages, `localhost`, `file://`) sin riesgo de que la visualización sea bloqueada por límites de cuota o claves privadas de facturación de Google Cloud.
 
 ### 2. Google Fonts API
 * Integración CDN de las fuentes `Fraunces`, `Inter` y `JetBrains Mono` con preconexión (`preconnect`) a `fonts.googleapis.com` y `fonts.gstatic.com` para acelerar los tiempos de renderizado visual (FCP).
