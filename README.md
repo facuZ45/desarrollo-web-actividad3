@@ -3,7 +3,8 @@
 > **Materia:** Diseño y Desarrollo Web (Código: 16240)  
 > **Universidad:** UADE  
 > **Ciclo Lectivo:** 2026  
-> **Equipo:** Grupo 8  
+> **Equipo:** Grupo 8
+> **Integrantes:** Facundo Zega y Facundo Tisch
 
 ---
 
